@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learners Lane: California permit test practice</title>
+<meta name="description" content="Study smarter for your permit test. Practice questions, road signs and handbook summaries for the California DMV knowledge test.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='5' width='30' height='22' rx='4' fill='%2300623A'/%3E%3Crect x='3' y='7' width='26' height='18' rx='2.5' fill='none' stroke='%23fff' stroke-width='1.5'/%3E%3Cpath d='M10 11v10h7' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Cpath d='M19 11v10h5' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Overpass:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#00623A;
+  --green-deep:#004B2C;
+  --asphalt:#22272B;
+  --fog:#EDF0EF;
+  --white:#FFFFFF;
+  --yellow:#FFC72C;
+  --red:#B1121B;
+  --ink-soft:#4A5257;   /* secondary text, 7.3:1 on fog */
+  --line:#C9D0CE;
+  --green-tint:#E3F1EA;
+  --red-tint:#FBE9EA;
+  --display:'Overpass', 'Arial Narrow', Arial, sans-serif;
+  --body:'Atkinson Hyperlegible', Verdana, sans-serif;
+  --wrap:1120px;
+  --gutter:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--fog);color:var(--asphalt);font:400 17px/1.55 var(--body);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+a:hover{color:var(--green-deep)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1.1;margin:0}
+p{margin:0 0 1em}
+:focus{outline:none}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 6px var(--asphalt);border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:12px;top:-60px;z-index:10;background:var(--yellow);color:var(--asphalt);padding:10px 14px;font:800 16px var(--display);text-decoration:none;border-radius:6px}
+.skip:focus{top:12px}
+.page{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+section{padding:72px 0}
+.section-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:32px;border-bottom:3px solid var(--asphalt);padding-bottom:14px}
+.section-head h2{font-size:clamp(33px,5vw,48px);letter-spacing:-.01em}
+.section-head p{margin:0;max-width:52ch;color:var(--ink-soft)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:min(92vh,880px);background-color:#4F5E4C;overflow:hidden;display:flex;flex-direction:column;color:var(--white)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.street-signs{position:relative;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding:16px var(--gutter);max-width:var(--wrap);margin:0 auto;width:100%}
+.street-signs a{background:var(--green);color:var(--white);text-decoration:none;font:800 15px/1 var(--display);padding:9px 12px 7px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--green),inset 0 0 0 3.5px var(--white)}
+.street-signs a:hover{background:var(--green-deep);color:var(--white)}
+.sign-mount{--post:clamp(90px,20vh,200px);position:relative;margin:auto auto 0;padding:0 var(--gutter);width:100%;max-width:var(--wrap)}
+.sign-assembly{position:relative;max-width:700px;margin-bottom:var(--post);margin-top:64px}
+.sign-assembly::before,.sign-assembly::after{content:"";position:absolute;top:100%;height:var(--post);width:12px;background:#8E969A;box-shadow:inset 3px 0 0 #B9C0C3,inset -3px 0 0 #6E767A}
+.sign-assembly::before{left:22%}
+.sign-assembly::after{right:22%}
+.guide-sign{position:relative;background:var(--green);border-radius:18px;padding:26px 30px 22px;box-shadow:inset 0 0 0 5px var(--green),inset 0 0 0 8px var(--white),0 10px 30px rgba(0,0,0,.35)}
+.exit-tab{position:absolute;right:34px;bottom:100%;margin-bottom:-3px;background:var(--green);color:var(--yellow);text-decoration:none;font:800 20px/1 var(--display);padding:11px 18px 8px;border-radius:12px 12px 0 0;box-shadow:inset 3px 3px 0 0 var(--white),inset -3px 0 0 0 var(--white);letter-spacing:.02em}
+.exit-tab::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:6px;background:var(--green)}
+.exit-tab:hover{color:var(--white)}
+.guide-sign h1{font-size:clamp(37px,10.5vw,92px);letter-spacing:-.015em;line-height:1}
+.guide-sign .tagline{font:600 clamp(19px,2.6vw,28px)/1.2 var(--display);margin:10px 0 0}
+.destinations{display:flex;flex-wrap:wrap;gap:6px 30px;margin-top:22px;padding-top:16px;border-top:3px solid var(--white)}
+.destinations a{display:inline-flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font:800 clamp(18px,2.2vw,22px)/1 var(--display);padding:4px 2px}
+.destinations a:hover span{text-decoration:underline;text-underline-offset:4px}
+.destinations svg{width:22px;height:26px;flex:none}
+
+/* ---------- Test facts ---------- */
+.facts{padding-top:56px}
+.facts-grid{display:grid;gap:40px;grid-template-columns:1fr}
+.facts h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
+.facts h3{font-size:22px;margin:28px 0 10px}
+.lede{font-size:19px;max-width:60ch}
+.reg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:440px}
+.reg-sign{background:var(--white);border-radius:10px;padding:14px 10px 12px;text-align:center;box-shadow:inset 0 0 0 4px var(--white),inset 0 0 0 7px var(--asphalt),0 1px 0 var(--line)}
+.reg-sign .who{font:800 17px/1.05 var(--display);text-transform:uppercase;letter-spacing:.02em;min-height:2.1em;display:flex;align-items:center;justify-content:center}
+.reg-sign .num{font:800 clamp(56px,14vw,76px)/.95 var(--display);font-variant-numeric:tabular-nums;margin-top:4px}
+.reg-sign .unit{font:800 16px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.reg-sign .pass{font:600 16px/1.2 var(--display);margin-top:10px;padding-top:9px;border-top:2px solid var(--asphalt)}
+.counts-note{font-size:14px;color:var(--ink-soft);margin:12px 0 0;max-width:440px}
+.retake{margin-top:24px;padding-left:16px;border-left:5px solid var(--yellow);max-width:440px}
+.retake p{margin:0 0 .5em}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step}
+.steps li{counter-increment:step;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(step);font:800 30px/1 var(--display);color:var(--green);padding-top:2px}
+.steps strong{display:block;font-family:var(--display);font-weight:800;font-size:19px}
+
+/* ---------- Quiz ---------- */
+.quiz{background:var(--white)}
+.modes{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.mode{padding:24px 0;border-bottom:1px solid var(--line)}
+.mode h3{font-size:26px;margin-bottom:8px}
+.mode p{color:var(--ink-soft);max-width:46ch}
+.field{display:block;font:600 15px var(--display);margin-bottom:6px}
+select{font:400 17px var(--body);color:var(--asphalt);width:100%;max-width:420px;min-height:48px;padding:10px 40px 10px 12px;border:2px solid var(--asphalt);border-radius:8px;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%2322272B' stroke-width='2.5'/%3E%3C/svg%3E") no-repeat right 14px center;-webkit-appearance:none;appearance:none;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px 10px;font:800 18px/1 var(--display);border-radius:8px;border:2px solid var(--asphalt);background:var(--white);color:var(--asphalt);cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--fog)}
+.btn-primary{background:var(--green);border-color:var(--green);color:var(--white)}
+.btn-primary:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.btn-text{background:none;border:0;padding:12px 4px;font:600 16px var(--display);color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:48px}
+.btn-text:hover{color:var(--asphalt)}
+.last-result{font-size:15px;color:var(--ink-soft);margin:12px 0 0}
+.resume{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:16px 18px;margin-bottom:24px;background:var(--fog);border-left:6px solid var(--yellow)}
+.resume p{margin:0;flex:1 1 260px}
+.kbd-hint{font-size:15px;color:var(--ink-soft);margin:20px 0 0}
+kbd{font:600 14px var(--display);border:1.5px solid var(--ink-soft);border-bottom-width:3px;border-radius:5px;padding:1px 7px 0;background:var(--white);color:var(--asphalt)}
+
+.play{max-width:760px}
+.q-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;font:600 16px var(--display);margin-bottom:10px;font-variant-numeric:tabular-nums}
+.q-meta .label{color:var(--ink-soft)}
+.lane{--p:0%;position:relative;height:34px;background:var(--asphalt);border-radius:3px;box-shadow:inset 0 3px 0 var(--yellow),inset 0 -3px 0 var(--white);overflow:hidden}
+.lane::before,.lane-fill{content:"";position:absolute;left:0;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,currentColor 0 26px,transparent 26px 44px)}
+.lane::before{right:0;color:rgba(255,255,255,.22)}
+.lane-fill{width:var(--p);color:var(--white);transition:width .35s ease}
+.lane-car{position:absolute;top:50%;left:var(--p);width:26px;height:16px;margin-top:-8px;transform:translateX(-100%);background:var(--yellow);border-radius:5px 8px 8px 5px;transition:left .35s ease}
+.q-card{margin-top:28px}
+.q-topic{font:600 15px var(--display);color:var(--green);margin:0 0 8px}
+.q-text{font:700 clamp(22px,3.2vw,27px)/1.3 var(--body);margin:0 0 22px}
+.options{display:grid;gap:10px}
+.option{display:grid;grid-template-columns:36px 1fr;align-items:center;gap:14px;width:100%;min-height:58px;padding:12px 16px;text-align:left;font:400 18px/1.4 var(--body);color:var(--asphalt);background:var(--white);border:2px solid var(--asphalt);border-radius:8px;cursor:pointer;transition:background-color .15s,border-color .15s}
+.option:hover:not(:disabled){background:var(--fog)}
+.option .key{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:6px;background:var(--asphalt);color:var(--white);font:800 17px/1 var(--display);padding-top:2px}
+.option .verdict{grid-column:2;font:800 15px/1.2 var(--display);display:none;align-items:center;gap:6px}
+.option .verdict svg{width:18px;height:18px;flex:none}
+.option:disabled{cursor:default}
+.option.is-correct{background:var(--green-tint);border-color:var(--green);border-width:3px}
+.option.is-correct .key{background:var(--green)}
+.option.is-correct .verdict{display:flex;color:var(--green)}
+.option.is-wrong{background:var(--red-tint);border-color:var(--red);border-width:3px}
+.option.is-wrong .key{background:var(--red)}
+.option.is-wrong .verdict{display:flex;color:var(--red)}
+.option.is-dim{border-color:var(--line);color:var(--ink-soft)}
+.option.is-dim .key{background:var(--ink-soft)}
+.feedback:empty{display:none}
+.feedback{margin-top:20px;padding:16px 18px;border-left:6px solid var(--green);background:var(--fog)}
+.feedback.is-wrong{border-left-color:var(--red)}
+.feedback .fb-head{font:800 20px/1.25 var(--display);margin-bottom:6px}
+.feedback .fb-src{font:600 15px var(--display);color:var(--ink-soft);margin:0}
+.feedback p:last-child{margin-bottom:0}
+.q-actions{display:flex;flex-wrap:wrap-reverse;justify-content:space-between;align-items:center;gap:12px;margin-top:22px}
+
+.result-sign{border-radius:14px;padding:26px 26px 22px;max-width:560px;margin-bottom:24px}
+.result-sign.pass{background:var(--green);color:var(--white);box-shadow:inset 0 0 0 5px var(--green),inset 0 0 0 8px var(--white)}
+.result-sign.fail{background:var(--white);color:var(--asphalt);box-shadow:inset 0 0 0 5px var(--white),inset 0 0 0 8px var(--red)}
+.result-sign h3{font-size:clamp(34px,6vw,52px)}
+.result-sign .score{font:800 22px/1.2 var(--display);margin:12px 0 4px;font-variant-numeric:tabular-nums}
+.result-sign p:last-child{margin:0}
+.result-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.missed{max-width:760px;border-top:1px solid var(--line)}
+.missed summary{cursor:pointer;font:800 19px var(--display);padding:16px 0;min-height:48px}
+.missed ol{margin:0 0 16px;padding-left:24px}
+.missed li{padding:8px 0}
+.missed .ans{display:block;color:var(--green);font-weight:700}
+
+/* ---------- Photo band ---------- */
+.band{margin:0;height:clamp(200px,30vw,380px);background-color:#5B6E77;overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+
+/* ---------- Tips ---------- */
+.tips-grid{display:grid;gap:48px;grid-template-columns:1fr}
+.tips h3{font-size:26px;margin-bottom:14px}
+.numbers{width:100%;border-collapse:collapse;font-size:16px}
+.numbers th,.numbers td{text-align:left;vertical-align:top;padding:10px 10px 10px 0;border-bottom:1px solid var(--line)}
+.numbers tbody th[scope=rowgroup]{font:800 18px var(--display);padding-top:26px;border-bottom:2px solid var(--asphalt);color:var(--green)}
+.numbers td.n{font:800 19px/1.3 var(--display);white-space:nowrap;width:1%;padding-right:16px;font-variant-numeric:tabular-nums}
+.numbers td.pg{width:1%;padding-right:0;text-align:right}
+.stress{list-style:none;margin:0;padding:0}
+.stress li{padding:14px 0 14px 18px;border-left:4px solid var(--green);margin-bottom:14px;background:var(--white);padding-right:14px}
+.stress strong{display:block;font:800 19px var(--display);margin-bottom:4px}
+.stress p{margin:0}
+
+/* ---------- Signs ---------- */
+.signs{background:var(--white)}
+.sign-group{margin-bottom:56px}
+.sign-group:last-child{margin-bottom:0}
+.group-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-bottom:8px}
+.group-head h3{font-size:28px}
+.group-head p{margin:0;color:var(--ink-soft)}
+.sign-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:32px}
+.sign-tile{display:grid;grid-template-columns:84px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.sign-tile svg{width:84px;height:84px}
+.sign-tile h4{font-size:19px;margin:2px 0 6px}
+.sign-tile p{font-size:16px;margin:0 0 6px}
+.sign-tile .do{font-weight:700}
+.sign-tile .page{display:block;margin-top:4px}
+.sign-txt{font-family:var(--display);font-weight:800}
+
+/* ---------- Summary ---------- */
+.summary-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:48px}
+.summary-list > li{padding:20px 0;border-top:1px solid var(--line)}
+.summary-list h3{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:21px;margin-bottom:10px}
+.summary-list ul{margin:0;padding-left:20px}
+.summary-list ul li{margin-bottom:6px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--asphalt);color:#E4E8E7;padding:48px 0 56px;font-size:15px}
+footer a{color:var(--yellow)}
+footer a:hover{color:var(--white)}
+footer .disclaimer{font:800 20px/1.3 var(--display);color:var(--white);max-width:40ch}
+footer .cols{display:grid;gap:24px;grid-template-columns:1fr;margin-top:24px;padding-top:24px;border-top:1px solid #4A5257}
+footer p{margin:0 0 .6em}
+
+@media (min-width:720px){
+  :root{--gutter:32px}
+  section{padding:96px 0}
+  .facts-grid{grid-template-columns:1.15fr 1fr;gap:64px}
+  .modes{grid-template-columns:1fr 1fr;column-gap:48px}
+  .tips-grid{grid-template-columns:1.25fr 1fr;gap:64px}
+  .sign-grid{grid-template-columns:1fr 1fr}
+  .summary-list{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .guide-sign{padding:34px 42px 26px}
+}
+@media (min-width:1040px){
+  .sign-grid{grid-template-columns:repeat(3,1fr)}
+  .sign-tile{grid-template-columns:96px 1fr}
+  .sign-tile svg{width:96px;height:96px}
+}
+@media (max-width:600px){
+  .numbers,.numbers tbody{display:block;width:100%}
+  .numbers tr{display:grid;grid-template-columns:1fr auto;column-gap:12px;border-bottom:1px solid var(--line);padding:10px 0}
+  .numbers td,.numbers th{border-bottom:0;padding:0;width:auto!important}
+  .numbers td.n{grid-column:1;grid-row:1;white-space:normal}
+  .numbers td.pg{grid-column:2;grid-row:1;align-self:baseline}
+  .numbers td:not(.n):not(.pg){grid-column:1 / -1;grid-row:2;margin-top:2px}
+  .numbers tbody tr:first-child{border-bottom:2px solid var(--asphalt);padding-top:26px}
+  .numbers tbody th[scope=rowgroup]{border-bottom:0;padding:0}
+}
+@media (max-width:420px){
+  .guide-sign{padding:22px 20px 18px}
+  .exit-tab{right:18px;font-size:17px;padding:10px 14px 7px}
+  .destinations{gap:4px 18px}
+  .numbers td.n{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#quiz">Skip to the practice quiz</a>
+
+<!-- Shared sign shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="diamond-y" viewBox="0 0 100 100"><polygon points="50,1.5 98.5,50 50,98.5 1.5,50" fill="#FFC72C" stroke="#8a6d10" stroke-width="1"/><polygon points="50,7 93,50 50,93 7,50" fill="none" stroke="#1D1D1B" stroke-width="2.6"/></symbol>
+    <symbol id="diamond-o" viewBox="0 0 100 100"><polygon points="50,1.5 98.5,50 50,98.5 1.5,50" fill="#F26A1F" stroke="#8a3a0e" stroke-width="1"/><polygon points="50,7 93,50 50,93 7,50" fill="none" stroke="#1D1D1B" stroke-width="2.6"/></symbol>
+    <symbol id="plate-w" viewBox="0 0 100 100"><rect x="14" y="2" width="72" height="96" rx="6" fill="#fff" stroke="#9aa3a6" stroke-width="1"/><rect x="18" y="6" width="64" height="88" rx="4" fill="none" stroke="#1D1D1B" stroke-width="2.6"/></symbol>
+    <symbol id="nosign" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="7" fill="#fff" stroke="#9aa3a6" stroke-width="1"/><rect x="8" y="8" width="84" height="84" rx="5" fill="none" stroke="#1D1D1B" stroke-width="2.6"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1633230329626-f0fddf6e1154?w=2000&q=70&auto=format&fit=crop" alt="A two-lane road winding through green coastal hills in the Marin Headlands" width="2000" height="1333" fetchpriority="high">
+  <nav class="street-signs" aria-label="Sections">
+    <a href="#quiz">Quiz</a>
+    <a href="#tips">Tips</a>
+    <a href="#signs">Road signs</a>
+    <a href="#handbook">Handbook</a>
+  </nav>
+  <div class="sign-mount">
+    <div class="sign-assembly">
+      <div class="guide-sign">
+        <a class="exit-tab" href="#quiz" aria-label="Exit 1: go to the practice quiz">EXIT 1</a>
+        <h1>Learners Lane</h1>
+        <p class="tagline">Study smarter for your permit test</p>
+        <div class="destinations">
+          <a href="#quiz"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M8 0h6v15h7L11 26 1 15h7z" fill="#fff"/></svg><span>Practice quiz</span></a>
+          <a href="#signs"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M8 0h6v15h7L11 26 1 15h7z" fill="#fff"/></svg><span>Road signs</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="facts" aria-labelledby="facts-title">
+  <div class="wrap facts-grid">
+    <div>
+      <h2 id="facts-title">The knowledge test, in plain terms</h2>
+      <p class="lede">Before you can get a California driver’s license, you have to pass a knowledge test and a behind-the-wheel drive test. Both are based on the <em>California Driver’s Handbook</em>.</p>
+      <p>The knowledge test is multiple choice. You take it when you apply for your instruction permit, along with a vision test. You can’t use testing aids such as the handbook or your phone. <span class="page">pp. 1–2, 5</span></p>
+
+      <h3>How to prepare</h3>
+      <ol class="steps">
+        <li><div><strong>Read the official handbook</strong>The tests are based on it. Start with Section 7, Laws and Rules of the Road.</div></li>
+        <li><div><strong>Practice one topic at a time</strong>Work through a topic until you can explain why each answer is right.</div></li>
+        <li><div><strong>Take full mock tests</strong>46 random questions with a pass mark of 38. Aim to pass several in a row.</div></li>
+        <li><div><strong>Review what you missed</strong>Reread the handbook page cited under each missed question, then test yourself again.</div></li>
+      </ol>
+    </div>
+    <div>
+      <div class="reg-row">
+        <div class="reg-sign" aria-label="Under 18: 46 questions, 38 correct to pass">
+          <div class="who" aria-hidden="true">Under 18</div>
+          <div class="num" aria-hidden="true">46</div>
+          <div class="unit" aria-hidden="true">questions</div>
+          <div class="pass" aria-hidden="true">38 correct to pass</div>
+        </div>
+        <div class="reg-sign" aria-label="18 and older: 36 questions, 30 correct to pass">
+          <div class="who" aria-hidden="true">18 and older</div>
+          <div class="num" aria-hidden="true">36</div>
+          <div class="unit" aria-hidden="true">questions</div>
+          <div class="pass" aria-hidden="true">30 correct to pass</div>
+        </div>
+      </div>
+      <p class="counts-note">These question counts and pass marks come from the DMV. The handbook itself only says the test is multiple choice, so check dmv.ca.gov before your appointment.</p>
+      <div class="retake">
+        <p><strong>If you fail:</strong> you get three attempts to pass the knowledge test before you must reapply.</p>
+        <p>If you’re under 18, wait seven days to retake a failed knowledge test, not counting the day you failed. A failed drive test means a 14-day wait. <span class="page">pp. 5–6</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz" id="quiz" aria-labelledby="quiz-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="quiz-title">Practice quiz</h2>
+      <p>120 questions written from the handbook, each with an explanation and page reference.</p>
+    </div>
+
+    <div id="q-start">
+      <div class="resume" id="resume" hidden>
+        <p id="resume-text"></p>
+        <button type="button" class="btn btn-primary" id="resume-go">Resume</button>
+        <button type="button" class="btn-text" id="resume-drop">Discard it</button>
+      </div>
+      <div class="modes">
+        <div class="mode">
+          <h3>Mock test</h3>
+          <p>46 random questions from every topic. You pass with 38 correct, the same as the under-18 test.</p>
+          <button type="button" class="btn btn-primary" id="start-mock">Start mock test</button>
+          <p class="last-result" id="last-mock" hidden></p>
+        </div>
+        <div class="mode">
+          <h3>Practice by topic</h3>
+          <label class="field" for="topic">Topic</label>
+          <select id="topic"></select>
+          <div><button type="button" class="btn" id="start-topic">Start topic practice</button></div>
+          <p class="last-result" id="last-topic" hidden></p>
+        </div>
+      </div>
+      <p class="kbd-hint">Keyboard: press <kbd>1</kbd> <kbd>2</kbd> or <kbd>3</kbd> to answer, and <kbd>Enter</kbd> for the next question.</p>
+      <noscript><p><strong>The quiz needs JavaScript.</strong> The tips, road signs and handbook summary below work without it.</p></noscript>
+    </div>
+
+    <div id="q-play" class="play" hidden>
+      <div class="q-meta">
+        <span class="label" id="q-label"></span>
+        <span id="q-count"></span>
+        <span id="q-score"></span>
+      </div>
+      <div class="lane" id="q-lane" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="46" aria-valuenow="0">
+        <div class="lane-fill"></div><div class="lane-car"></div>
+      </div>
+      <div class="q-card">
+        <p class="q-topic" id="q-topic"></p>
+        <h3 class="q-text" id="q-text" tabindex="-1"></h3>
+        <div class="options" id="q-options" role="group" aria-labelledby="q-text"></div>
+        <div class="feedback" id="q-feedback" aria-live="polite"></div>
+        <div class="q-actions">
+          <button type="button" class="btn-text" id="q-exit">Save and exit</button>
+          <button type="button" class="btn btn-primary" id="q-next" hidden>Next question</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="q-end" class="play" hidden tabindex="-1"></div>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="https://images.unsplash.com/photo-1590673701585-8b1108bcac41?w=1600&q=70&auto=format&fit=crop" alt="The Upper Great Highway in San Francisco running straight beside the ocean" width="1600" height="1067" loading="lazy">
+</figure>
+
+<section class="tips" id="tips" aria-labelledby="tips-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="tips-title">Tips for passing</h2>
+      <p>Most missed questions come down to a handful of numbers. Learn these cold.</p>
+    </div>
+    <div class="tips-grid">
+      <div>
+        <h3>Numbers students mix up</h3>
+        <table class="numbers">
+          <caption class="sr-only" style="position:absolute;left:-9999px">Commonly confused numbers from the handbook, with page references</caption>
+          <tbody>
+            <tr><th scope="rowgroup" colspan="3">Distances and timing</th></tr>
+            <tr><td class="n">100 ft</td><td>Signal at least this far before you turn.</td><td class="pg page">p. 11</td></tr>
+            <tr><td class="n">5 sec</td><td>Signal before changing lanes on a freeway, and before you exit.</td><td class="pg page">pp. 11, 23</td></tr>
+            <tr><td class="n">3 sec</td><td>Following distance: the three-second rule.</td><td class="pg page">p. 57</td></tr>
+            <tr><td class="n">200 ft</td><td>The most you may drive in a center left turn lane. Also how close to a turn you may enter a bike lane.</td><td class="pg page">pp. 16–17</td></tr>
+            <tr><td class="n">500 / 300 ft</td><td>Dim your high beams within 500 ft of an oncoming vehicle, and within 300 ft of one you’re following.</td><td class="pg page">p. 11</td></tr>
+            <tr><td class="n">300 ft</td><td>Never follow an emergency vehicle with its siren or lights on closer than this.</td><td class="pg page">p. 45</td></tr>
+            <tr><td class="n">15 ft</td><td>No parking this close to a fire hydrant. It’s also the minimum stopping distance from the nearest railroad track.</td><td class="pg page">pp. 28, 51</td></tr>
+            <tr><td class="n">20 ft</td><td>No parking this close to a crosswalk (15 ft where there’s a curb extension).</td><td class="pg page">p. 28</td></tr>
+            <tr><td class="n">3 ft</td><td>The minimum space when passing a bicyclist.</td><td class="pg page">p. 48</td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="rowgroup" colspan="3">Speed limits</th></tr>
+            <tr><td class="n">65 mph</td><td>Most California highways, unless posted.</td><td class="pg page">p. 67</td></tr>
+            <tr><td class="n">55 mph</td><td>Two-lane undivided highways, and any vehicle towing a trailer.</td><td class="pg page">p. 67</td></tr>
+            <tr><td class="n">25 mph</td><td>Business and residential districts, and within 500 ft of a school while children are outside or crossing.</td><td class="pg page">pp. 50, 52</td></tr>
+            <tr><td class="n">15 mph</td><td>Blind intersections, alleys, and within 100 ft of a railroad crossing where you can’t see 400 ft both ways.</td><td class="pg page">p. 51</td></tr>
+            <tr><td class="n">30 mph</td><td>The safe maximum when you can’t see farther than 100 ft ahead.</td><td class="pg page">p. 62</td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="rowgroup" colspan="3">Blood alcohol (BAC)</th></tr>
+            <tr><td class="n">0.08%</td><td>Illegal to drive at or above this if you’re 21 or older.</td><td class="pg page">p. 73</td></tr>
+            <tr><td class="n">0.04%</td><td>The limit for commercial drivers, or when driving a passenger for hire.</td><td class="pg page">p. 73</td></tr>
+            <tr><td class="n">0.01%</td><td>The limit if you’re under 21, or on DUI probation at any age.</td><td class="pg page">p. 73</td></tr>
+            <tr><td class="n">0.05%</td><td>Under 21: a breath screening at or above this can mean more testing and a DUI arrest.</td><td class="pg page">p. 75</td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="rowgroup" colspan="3">Provisional license (under 18)</th></tr>
+            <tr><td class="n">15½</td><td>The youngest age at which you can apply for an instruction permit.</td><td class="pg page">p. 3</td></tr>
+            <tr><td class="n">6 months</td><td>How long to hold your permit before the drive test. You also need 50 practice hours, 10 of them at night.</td><td class="pg page">p. 3</td></tr>
+            <tr><td class="n">11 p.m.–5 a.m.</td><td>No driving during these hours for your first 12 months.</td><td class="pg page">p. 4</td></tr>
+            <tr><td class="n">Under 20</td><td>No passengers this young unless a parent, guardian or licensed driver 25 or older rides with you.</td><td class="pg page">p. 4</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>What the handbook stresses</h3>
+        <ul class="stress">
+          <li><strong>Right-of-way, again and again</strong><p>Pedestrians always have the right-of-way. Give up your own right-of-way whenever it helps prevent a collision. <span class="page">p. 39</span></p></li>
+          <li><strong>The “never” lists</strong><p>Memorize where you may never make a U-turn, park, or pass. Test questions love these. <span class="page">pp. 20, 24, 28–29</span></p></li>
+          <li><strong>Shape before words</strong><p>An octagon means stop, a triangle means yield, five sides means a school, a circle means a railroad crossing, a diamond is a warning, and a white rectangle is a rule. <span class="page">pp. 35, 38</span></p></li>
+          <li><strong>Slowing down for weather</strong><p>On a wet road, drop 5–10 mph. On packed snow, drive at half speed. On ice, go no faster than 5 mph. <span class="page">p. 61</span></p></li>
+          <li><strong>Your first year</strong><p>Two at-fault collisions or convictions mean 30 days of driving only with a licensed adult 25 or older. Three mean a six-month suspension. <span class="page">p. 55</span></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="signs" id="signs" aria-labelledby="signs-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="signs-title">Road signs</h2>
+      <p>All 30 signs below appear in the handbook. Learn the shape and color first, then the words.</p>
+    </div>
+
+    <div class="sign-group">
+      <div class="group-head"><h3>Regulatory</h3><p>Red and white or black and white. These are rules you must obey.</p></div>
+      <ul class="sign-grid">
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,1 70.7,1 99,29.3 99,70.7 70.7,99 29.3,99 1,70.7 1,29.3" fill="#B1121B"/><polygon points="31,6 69,6 94,31 94,69 69,94 31,94 6,69 6,31" fill="none" stroke="#fff" stroke-width="3"/><text x="50" y="61" text-anchor="middle" font-size="30" fill="#fff" class="sign-txt">STOP</text></svg>
+          <div><h4>Stop</h4><p>Come to a full stop.</p><p class="do">Stop at the limit line, or before the crosswalk or intersection. Check all directions before going.</p><span class="page">p. 35</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="2,10 98,10 50,94" fill="#B1121B"/><polygon points="22,21 78,21 50,70" fill="#fff"/><text x="50" y="37" text-anchor="middle" font-size="12" fill="#B1121B" class="sign-txt">YIELD</text></svg>
+          <div><h4>Yield</h4><p>Let others go first.</p><p class="do">Slow down and be ready to stop for any vehicle, bicyclist or pedestrian.</p><span class="page">p. 35</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#nosign" width="100" height="100"/><circle cx="50" cy="50" r="38" fill="#B1121B"/><rect x="20" y="44" width="60" height="12" fill="#fff"/><text x="50" y="36" text-anchor="middle" font-size="12" fill="#fff" class="sign-txt">DO NOT</text><text x="50" y="72" text-anchor="middle" font-size="12" fill="#fff" class="sign-txt">ENTER</text></svg>
+          <div><h4>Do Not Enter</h4><p>Traffic on this road or ramp comes toward you.</p><p class="do">Don’t enter the road or ramp where it’s posted.</p><span class="page">p. 38</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="24" width="96" height="52" rx="5" fill="#B1121B"/><rect x="6" y="28" width="88" height="44" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><text x="50" y="49" text-anchor="middle" font-size="17" fill="#fff" class="sign-txt">WRONG</text><text x="50" y="67" text-anchor="middle" font-size="17" fill="#fff" class="sign-txt">WAY</text></svg>
+          <div><h4>Wrong Way</h4><p>You’ve entered a road against traffic.</p><p class="do">When it’s safe, back out or turn around. At night, red reflectors in your headlights mean the same thing.</p><span class="page">p. 38</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#nosign" width="100" height="100"/><path d="M60 70V44a10 10 0 0 0-20 0v14" fill="none" stroke="#1D1D1B" stroke-width="8"/><polygon points="31,56 49,56 40,72" fill="#1D1D1B"/><circle cx="50" cy="50" r="34" fill="none" stroke="#B1121B" stroke-width="7"/><line x1="26" y1="26" x2="74" y2="74" stroke="#B1121B" stroke-width="7"/></svg>
+          <div><h4>No U-Turn</h4><p>A red circle with a line through it shows what you can’t do.</p><p class="do">Don’t make a U-turn here.</p><span class="page">pp. 20, 38</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#nosign" width="100" height="100"/><path d="M58 74V50a8 8 0 0 0-8-8H40" fill="none" stroke="#1D1D1B" stroke-width="8"/><polygon points="42,31 27,42 42,53" fill="#1D1D1B"/><circle cx="50" cy="50" r="34" fill="none" stroke="#B1121B" stroke-width="7"/><line x1="26" y1="26" x2="74" y2="74" stroke="#B1121B" stroke-width="7"/></svg>
+          <div><h4>No Left Turn</h4><p>Left turns are not allowed here.</p><p class="do">Go straight or turn right instead.</p><span class="page">pp. 36, 38</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="35" width="96" height="30" rx="2" fill="#1D1D1B"/><polygon points="6,41 70,41 70,38.5 94,50 70,61.5 70,59 6,59" fill="#fff"/><text x="38" y="54.5" text-anchor="middle" font-size="12" fill="#1D1D1B" class="sign-txt">ONE WAY</text></svg>
+          <div><h4>One Way</h4><p>A white or black rectangle shows a rule you must obey.</p><p class="do">Never make a U-turn on a one-way street. You may pass on the right on one.</p><span class="page">pp. 20, 25, 36</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#plate-w" width="100" height="100"/><text x="50" y="34" text-anchor="middle" font-size="19" fill="#1D1D1B" class="sign-txt">DO</text><text x="50" y="57" text-anchor="middle" font-size="19" fill="#1D1D1B" class="sign-txt">NOT</text><text x="50" y="80" text-anchor="middle" font-size="19" fill="#1D1D1B" class="sign-txt">PASS</text></svg>
+          <div><h4>Do Not Pass</h4><p>No passing on this stretch.</p><p class="do">Stay in your lane. Passing near hills, curves and intersections is dangerous anyway.</p><span class="page">pp. 24, 36</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#plate-w" width="100" height="100"/><text x="50" y="24" text-anchor="middle" font-size="10" fill="#1D1D1B" class="sign-txt">LEFT TURN</text><text x="50" y="44" text-anchor="middle" font-size="17" fill="#1D1D1B" class="sign-txt">YIELD</text><text x="50" y="58" text-anchor="middle" font-size="10" fill="#1D1D1B" class="sign-txt">ON GREEN</text><circle cx="50" cy="76" r="10" fill="#00A651"/></svg>
+          <div><h4>Left Turn Yield on Green</h4><p>A green light doesn’t give you a protected left turn.</p><p class="do">Yield to pedestrians and to oncoming vehicles close enough to be dangerous.</p><span class="page">pp. 36, 39</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#plate-w" width="100" height="100"/><text x="50" y="36" text-anchor="middle" font-size="16" fill="#1D1D1B" class="sign-txt">DO NOT</text><text x="50" y="58" text-anchor="middle" font-size="18" fill="#1D1D1B" class="sign-txt">BLOCK</text><text x="50" y="76" text-anchor="middle" font-size="8.6" fill="#1D1D1B" class="sign-txt">INTERSECTION</text></svg>
+          <div><h4>Do Not Block Intersection</h4><p>Blocking an intersection is against the law.</p><p class="do">Don’t enter unless you have room to get all the way across before the light turns red.</p><span class="page">pp. 36, 39</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sign-group">
+      <div class="group-head"><h3>Warning</h3><p>Yellow diamonds, the five-sided school sign and the round railroad sign all warn of something ahead.</p></div>
+      <ul class="sign-grid">
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><rect x="38" y="27" width="24" height="13" rx="4" fill="#1D1D1B"/><rect x="41" y="23" width="18" height="8" rx="3" fill="#1D1D1B"/><path d="M42 46c-6 5 6 9 0 14s6 9 0 14M58 46c-6 5 6 9 0 14s6 9 0 14" fill="none" stroke="#1D1D1B" stroke-width="3.5" stroke-linecap="round"/></svg>
+          <div><h4>Slippery When Wet</h4><p>The road gets slick when wet.</p><p class="do">Slow down 5–10 mph in rain, and take extra care when rain first starts.</p><span class="page">pp. 37, 61</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><path d="M57 80V36" stroke="#1D1D1B" stroke-width="8"/><polygon points="45,38 57,20 69,38" fill="#1D1D1B"/><path d="M36 80c0-16 21-18 21-30" fill="none" stroke="#1D1D1B" stroke-width="7"/></svg>
+          <div><h4>Merging Traffic</h4><p>Traffic joins your road from the side.</p><p class="do">Make space for vehicles entering, even if you have the right-of-way.</p><span class="page">pp. 37, 58</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><path d="M40 24v54M61 24v22L50 60v18" fill="none" stroke="#1D1D1B" stroke-width="8"/></svg>
+          <div><h4>Lane Ends</h4><p>Your lane is about to end.</p><p class="do">Look for a sign telling you to exit or merge, and merge safely.</p><span class="page">pp. 14, 37</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><rect x="39" y="22" width="22" height="56" rx="4" fill="#1D1D1B"/><circle cx="50" cy="33" r="6.5" fill="#E2231A"/><circle cx="50" cy="50" r="6.5" fill="#FFC72C"/><circle cx="50" cy="67" r="6.5" fill="#00A651"/></svg>
+          <div><h4>Traffic Signal Ahead</h4><p>A traffic light is coming up.</p><p class="do">Be ready to stop. On yellow, stop if you can do so safely.</p><span class="page">pp. 33, 37</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><circle cx="53" cy="25" r="6" fill="#1D1D1B"/><path d="M52 34l-9 18M52 34l2 20M54 54l-9 22M54 54l8 22M52 36l-11 9M52 36l10 10" stroke="#1D1D1B" stroke-width="6" stroke-linecap="round"/></svg>
+          <div><h4>Pedestrian Crossing</h4><p>People may be crossing ahead.</p><p class="do">Slow down or stop to let pedestrians finish crossing, with or without a crosswalk.</p><span class="page">pp. 37, 41</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><polygon points="50,17 61,30 54,30 54,37 46,37 46,30 39,30" fill="#1D1D1B"/><polygon points="43.4,42 56.6,42 66,51.4 66,64.6 56.6,74 43.4,74 34,64.6 34,51.4" fill="#E2231A"/></svg>
+          <div><h4>Stop Ahead</h4><p>A stop sign is ahead, possibly hidden.</p><p class="do">Slow down and get ready to stop at the limit line.</p><span class="page">pp. 35, 37</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><path d="M58 80V60c0-12-6-18-16-24" fill="none" stroke="#1D1D1B" stroke-width="8"/><polygon points="31,27 51,29 39,46" fill="#1D1D1B"/></svg>
+          <div><h4>Curve</h4><p>The road curves in the direction shown.</p><p class="do">Slow down before the curve, not in it, and avoid fast turns.</p><span class="page">pp. 37, 60</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-y" width="100" height="100"/><path d="M41 24v38M59 76V38" stroke="#1D1D1B" stroke-width="8"/><polygon points="31,60 41,78 51,60" fill="#1D1D1B"/><polygon points="49,40 59,22 69,40" fill="#1D1D1B"/></svg>
+          <div><h4>Two Way Traffic</h4><p>Oncoming traffic shares this road.</p><p class="do">Stay to the right. Only pass when you can see well ahead and it’s safe.</p><span class="page">pp. 13, 37</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,3 97,38 97,97 3,97 3,38" fill="#FFC72C" stroke="#8a6d10" stroke-width="1"/><polygon points="50,8.5 92,40 92,92 8,92 8,40" fill="none" stroke="#1D1D1B" stroke-width="2.6"/><circle cx="39" cy="45" r="5.5" fill="#1D1D1B"/><polygon points="33,52 45,52 48,70 30,70" fill="#1D1D1B"/><path d="M35 70v14M43 70v14" stroke="#1D1D1B" stroke-width="4.5"/><circle cx="62" cy="42" r="6" fill="#1D1D1B"/><polygon points="55,50 69,50 72,70 52,70" fill="#1D1D1B"/><path d="M58 70v14M66 70v14" stroke="#1D1D1B" stroke-width="4.5"/></svg>
+          <div><h4>School</h4><p>Five sides means you’re near a school.</p><p class="do">Drive slowly and stop for children in the crosswalk. The limit is 25 mph within 500 ft when children are present.</p><span class="page">pp. 38, 50</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="#FFC72C" stroke="#1D1D1B" stroke-width="3"/><path d="M22 22l56 56M78 22L22 78" stroke="#1D1D1B" stroke-width="8"/><text x="22" y="57" text-anchor="middle" font-size="19" fill="#1D1D1B" class="sign-txt">R</text><text x="78" y="57" text-anchor="middle" font-size="19" fill="#1D1D1B" class="sign-txt">R</text></svg>
+          <div><h4>Railroad Crossing Ahead</h4><p>A round yellow sign means a railroad crossing is coming.</p><p class="do">Look, listen, slow down and prepare to stop. Let any trains pass first.</p><span class="page">p. 38</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,8 97,90 3,90" fill="#D7262B"/><polygon points="50,28 80,80 20,80" fill="#F7941D"/></svg>
+          <div><h4>Slow-Moving Vehicle</h4><p>This orange and red triangle marks vehicles that usually go 25 mph or less.</p><p class="do">Slow down early and pass only when it’s safe.</p><span class="page">pp. 36, 45</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sign-group">
+      <div class="group-head"><h3>Construction</h3><p>Orange signs mark work zones, where fines can be doubled.</p></div>
+      <ul class="sign-grid">
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-o" width="100" height="100"/><text x="50" y="35" text-anchor="middle" font-size="10.5" fill="#1D1D1B" class="sign-txt">THRU</text><text x="50" y="47" text-anchor="middle" font-size="10.5" fill="#1D1D1B" class="sign-txt">TRAFFIC</text><text x="50" y="59" text-anchor="middle" font-size="10.5" fill="#1D1D1B" class="sign-txt">MERGE</text><text x="50" y="71" text-anchor="middle" font-size="10.5" fill="#1D1D1B" class="sign-txt">LEFT</text></svg>
+          <div><h4>Thru Traffic Merge Left</h4><p>A lane is closed ahead.</p><p class="do">Merge as soon as it’s safe without crossing the cones or drums.</p><span class="page">pp. 36, 49</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-o" width="100" height="100"/><text x="50" y="40" text-anchor="middle" font-size="12" fill="#1D1D1B" class="sign-txt">ROAD</text><text x="50" y="54" text-anchor="middle" font-size="12" fill="#1D1D1B" class="sign-txt">CLOSED</text><text x="50" y="68" text-anchor="middle" font-size="12" fill="#1D1D1B" class="sign-txt">AHEAD</text></svg>
+          <div><h4>Road Closed Ahead</h4><p>The road ahead is closed.</p><p class="do">Slow down and follow the detour signs, cones and flaggers.</p><span class="page">pp. 36, 49</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-o" width="100" height="100"/><text x="50" y="40" text-anchor="middle" font-size="11" fill="#1D1D1B" class="sign-txt">ROAD</text><text x="50" y="53" text-anchor="middle" font-size="11" fill="#1D1D1B" class="sign-txt">MACHINERY</text><text x="50" y="66" text-anchor="middle" font-size="11" fill="#1D1D1B" class="sign-txt">AHEAD</text></svg>
+          <div><h4>Road Machinery Ahead</h4><p>Slow-moving equipment is working on the road.</p><p class="do">Prepare to slow down or stop for highway equipment.</p><span class="page">pp. 36, 49</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-o" width="100" height="100"/><circle cx="44" cy="30" r="6" fill="#1D1D1B"/><path d="M44 38v22M44 60l-6 16M44 60l6 16" stroke="#1D1D1B" stroke-width="7" stroke-linecap="round"/><path d="M44 42l16-8" stroke="#1D1D1B" stroke-width="5" stroke-linecap="round"/><line x1="62" y1="26" x2="62" y2="48" stroke="#1D1D1B" stroke-width="3"/><circle cx="62" cy="26" r="8" fill="#1D1D1B"/></svg>
+          <div><h4>Flagger Ahead</h4><p>A worker is directing traffic.</p><p class="do">Obey the flagger’s instructions, and expect to stop.</p><span class="page">pp. 36, 49</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#diamond-o" width="100" height="100"/><text x="50" y="40" text-anchor="middle" font-size="9.5" fill="#1D1D1B" class="sign-txt">SHOULDER</text><text x="50" y="53" text-anchor="middle" font-size="11" fill="#1D1D1B" class="sign-txt">WORK</text><text x="50" y="66" text-anchor="middle" font-size="11" fill="#1D1D1B" class="sign-txt">AHEAD</text></svg>
+          <div><h4>Shoulder Work Ahead</h4><p>Crews are working beside the road.</p><p class="do">Slow down, leave extra space, and watch for bicycles if the shoulder is closed.</p><span class="page">pp. 36, 49</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sign-group">
+      <div class="group-head"><h3>Guide</h3><p>Green, brown and blue signs point the way to places and services.</p></div>
+      <ul class="sign-grid">
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="6" y="6" width="88" height="88" rx="6" fill="#00623A"/><rect x="10" y="10" width="80" height="80" rx="4" fill="none" stroke="#fff" stroke-width="2"/><path d="M50 16c3 0 5 3 5 7v15l25 15v7l-25-8v15l8 6v5l-13-4-13 4v-5l8-6V52l-25 8v-7l25-15V23c0-4 2-7 5-7z" fill="#fff"/></svg>
+          <div><h4>Airport</h4><p>A green guide sign showing the way to an airport.</p><p class="do">No action is required. Use it to plan your lane early.</p><span class="page">p. 36</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="6" y="6" width="88" height="88" rx="6" fill="#6B3E26"/><rect x="10" y="10" width="80" height="80" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="57" cy="26" r="6" fill="#fff"/><path d="M55 34L47 54l9 6-4 14M47 54l-11 14M54 38l12 10M50 40L38 46" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 76l52-10M70 48l4 28M36 46l-6 30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h4>Recreation area</h4><p>A brown guide sign showing the way to a recreation site, here cross-country skiing.</p><p class="do">No action is required. It points to a destination.</p><span class="page">p. 36</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="24" width="96" height="52" rx="6" fill="#0B4EA2"/><rect x="6" y="28" width="88" height="44" rx="4" fill="none" stroke="#fff" stroke-width="2"/><text x="50" y="48" text-anchor="middle" font-size="15" fill="#fff" class="sign-txt">REST AREA</text><text x="50" y="66" text-anchor="middle" font-size="13" fill="#fff" class="sign-txt">1 MILE</text></svg>
+          <div><h4>Rest Area</h4><p>A blue sign pointing to a service: a rest area one mile ahead.</p><p class="do">If you’re tired, plan to stop. Fatigue slows your reactions.</p><span class="page">pp. 9, 36</span></div>
+        </li>
+        <li class="sign-tile">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="20" width="96" height="60" rx="4" fill="#0B4EA2"/><text x="50" y="35" text-anchor="middle" font-size="10" fill="#fff" class="sign-txt">REPORT PROBLEM</text><text x="50" y="46" text-anchor="middle" font-size="10" fill="#fff" class="sign-txt">OR EMERGENCY</text><text x="50" y="57" text-anchor="middle" font-size="10" fill="#fff" class="sign-txt">1-800-555-5555</text><rect x="10" y="62" width="80" height="12" fill="#fff"/><text x="50" y="71.5" text-anchor="middle" font-size="9" fill="#0B4EA2" class="sign-txt">X-ING 836 597 H</text></svg>
+          <div><h4>Railroad emergency sign</h4><p>A blue and white sign at a crossing with a phone number and the crossing ID.</p><p class="do">If you stall on the tracks with no train coming, get out and call this number, then 911.</p><span class="page">pp. 38, 70</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="summary" id="handbook" aria-labelledby="summary-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="summary-title">Handbook summary</h2>
+      <p>The most-tested sections in a few lines each. Page numbers match the 2025 handbook.</p>
+    </div>
+    <ul class="summary-list">
+      <li><h3>Permit and license steps <span class="page">pp. 2–6</span></h3><ul>
+        <li>Under 18: be at least 15½, finish driver education, and get a parent or guardian to sign.</li>
+        <li>For the license: be 16, hold the permit 6 months, finish driver education and training, and log 50 practice hours (10 at night) with a licensed driver 25 or older.</li>
+        <li>You get three tries at the knowledge test. Minors wait 7 days after a failure, or 14 days after a failed drive test.</li></ul></li>
+      <li><h3>Provisional license rules <span class="page">pp. 4, 55, 71</span></h3><ul>
+        <li>First 12 months: no driving 11 p.m.–5 a.m., and no passengers under 20 without a licensed adult 25 or older.</li>
+        <li>Exceptions need a signed note: medical, school, work, or driving a family member.</li>
+        <li>No cell phone use at all while driving, except to call for emergency help.</li></ul></li>
+      <li><h3>Signals, horn and headlights <span class="page">pp. 10–12</span></h3><ul>
+        <li>Signal 100 ft before a turn, and 5 seconds before a freeway lane change.</li>
+        <li>Turn headlights on from 30 minutes after sunset to 30 minutes before sunrise, and whenever your wipers are on.</li>
+        <li>Dim high beams within 500 ft of oncoming traffic and 300 ft of a car you’re following.</li></ul></li>
+      <li><h3>Lanes, turns and passing <span class="page">pp. 13–25</span></h3><ul>
+        <li>Don’t pass over double solid yellow lines, and never change lanes over double solid white lines. A broken yellow line next to your lane means you may pass when safe.</li>
+        <li>Center left turn lane: 200 ft at most. A U-turn in a residential district needs 200 ft clear both ways.</li>
+        <li>Don’t pass within 100 ft of an intersection, bridge, tunnel or railroad crossing.</li></ul></li>
+      <li><h3>Parking <span class="page">pp. 26–29</span></h3><ul>
+        <li>Curbs: white is a passenger stop, green is time-limited, yellow is loading, red is no stopping, blue is disabled parking.</li>
+        <li>On a hill, turn your wheels toward the curb when facing downhill, away from it when facing uphill, and to the right if there’s no curb.</li>
+        <li>Keep 15 ft from a hydrant and 20 ft from a crosswalk.</li></ul></li>
+      <li><h3>Signals and signs <span class="page">pp. 33–38</span></h3><ul>
+        <li>Treat a flashing red like a stop sign. A flashing yellow means caution, and a red arrow means no turning at all.</li>
+        <li>A dark traffic light means a four-way stop.</li>
+        <li>Yield to pedestrians even when DON’T WALK is flashing.</li></ul></li>
+      <li><h3>Right-of-way <span class="page">pp. 39–42</span></h3><ul>
+        <li>The first vehicle to arrive goes first. If two arrive together, yield to the one on your right.</li>
+        <li>At a T intersection, the through road has the right-of-way. On a steep mountain road, the vehicle facing uphill does.</li>
+        <li>In a roundabout, yield on entry and travel counterclockwise.</li></ul></li>
+      <li><h3>Sharing the road <span class="page">pp. 42–52</span></h3><ul>
+        <li>If you can’t see a truck’s mirrors, its driver can’t see you. Pass large vehicles on the left.</li>
+        <li>Leave 3 seconds behind motorcycles and 3 ft when passing bicyclists.</li>
+        <li>When a school bus flashes red, stop from both directions, unless it’s across a divided or multilane highway.</li></ul></li>
+      <li><h3>Safe driving and conditions <span class="page">pp. 57–64</span></h3><ul>
+        <li>Scan at least 10 seconds ahead, and keep a 3-second following distance.</li>
+        <li>In a skid, ease off the gas, don’t brake, and steer in the direction of the skid.</li>
+        <li>In fog, use low beams. If you can’t see past 100 ft, go no faster than 30 mph.</li></ul></li>
+      <li><h3>Seat belts, child seats and speed <span class="page">pp. 65–67</span></h3><ul>
+        <li>Everyone buckles up. You can be ticketed for any passenger under 16 who isn’t.</li>
+        <li>Children under 8, or shorter than 4 ft 9 in, ride in a child restraint in the back seat.</li>
+        <li>Under the Basic Speed Law, never drive faster than is safe. The limit is 65 mph on most highways, 55 mph on two-lane undivided roads.</li></ul></li>
+      <li><h3>Emergencies <span class="page">pp. 68–70</span></h3><ul>
+        <li>Tire blowout: hold the wheel with both hands and ease off the gas gradually. Don’t brake hard.</li>
+        <li>Broken down on the freeway: pull onto the right shoulder, call 511, and stay buckled in.</li>
+        <li>Stalled on the tracks with a train coming: get out and run diagonally toward the train’s direction.</li></ul></li>
+      <li><h3>Alcohol and drugs <span class="page">pp. 72–75</span></h3><ul>
+        <li>BAC limits: 0.08% at 21 and over, 0.04% for commercial or for-hire drivers, 0.01% under 21.</li>
+        <li>Refusing a chemical test means a one-year suspension. A DUI stays on your record 10 years.</li>
+        <li>Open containers go in the trunk, never the glove box.</li></ul></li>
+      <li><h3>Insurance and collisions <span class="page">pp. 76–78</span></h3><ul>
+        <li>Minimum coverage is $30,000 for one person’s injury or death, $60,000 for more than one person, and $15,000 for property.</li>
+        <li>Report to law enforcement within 24 hours if anyone is hurt.</li>
+        <li>Report to DMV within 10 days if anyone is hurt or damage exceeds $1,000.</li></ul></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">Not affiliated with the California DMV. Always study the official handbook.</p>
+    <div class="cols">
+      <div>
+        <p>Facts, rules and quiz answers come from the <em>California Driver’s Handbook</em>, DL 600 English, revised June 2025 (© California Department of Motor Vehicles, licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>). The test question counts above come from the DMV and are not stated in the handbook.</p>
+        <p>Get the handbook at <a href="https://www.dmv.ca.gov">dmv.ca.gov</a>.</p>
+      </div>
+      <div>
+        <p>Photos from <a href="https://unsplash.com">Unsplash</a>:</p>
+        <p>Marin Headlands winding road by Will Truettner<br>Upper Great Highway, San Francisco, by Andreas Strandman</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const QUESTIONS = /*@questions-start*/[{"id":"row-01","topic":"Right-of-way and intersections","question":"At an intersection without STOP or YIELD signs, who has the right-of-way?","options":["The vehicle that arrives at the intersection first","The vehicle traveling at the higher speed","The vehicle going straight, regardless of when it arrived"],"answerIndex":0,"explanation":"Without STOP or YIELD signs, the vehicle that arrives at the intersection first has the right-of-way.","source":"Section 7, Right-of-Way Rules: Intersections, p. 39"},{"id":"row-02","topic":"Right-of-way and intersections","question":"You and another vehicle reach an uncontrolled intersection at the same time. What should you do?","options":["Go first if you are turning right","Give the right-of-way to the vehicle on your right","Give the right-of-way to the vehicle on your left"],"answerIndex":1,"explanation":"If a vehicle, pedestrian, or bicyclist reaches the intersection at the same time as you, give the right-of-way to the one on your right.","source":"Section 7, Right-of-Way Rules: Intersections, p. 39"},{"id":"row-03","topic":"Right-of-way and intersections","question":"At a T intersection without STOP or YIELD signs, who has the right-of-way?","options":["Traffic turning onto the through road","Whoever signals first","Traffic on the through road"],"answerIndex":2,"explanation":"At a T intersection without STOP or YIELD signs, vehicles, bicyclists, and pedestrians on the through road have the right-of-way.","source":"Section 7, Right-of-Way Rules: Intersections, p. 39"},{"id":"row-04","topic":"Right-of-way and intersections","question":"You are turning left at an intersection. Whom must you yield to?","options":["Any pedestrian or approaching vehicle close enough to be dangerous","Only vehicles that are already inside the intersection","Only pedestrians in a marked crosswalk"],"answerIndex":0,"explanation":"When turning left, check for pedestrians and give the right-of-way to any pedestrian or approaching vehicle that is close enough to be dangerous.","source":"Section 7, Right-of-Way Rules: Intersections, p. 39"},{"id":"row-05","topic":"Right-of-way and intersections","question":"Your light turns green, but there is not enough space to get completely across before the light turns red. What should you do?","options":["Enter slowly and wait in the intersection","Wait until there is enough space to cross completely","Enter if your front bumper can clear the crosswalk"],"answerIndex":1,"explanation":"It is against the law to stop or block an intersection where there is not enough space to completely cross before the light turns red.","source":"Section 7, Right-of-Way Rules: Intersections, p. 39"},{"id":"row-06","topic":"Right-of-way and intersections","question":"What should you do when approaching a roundabout?","options":["Speed up to merge ahead of circulating traffic","Stop at the entrance even when the roundabout is empty","Slow down and yield to all traffic already in the roundabout"],"answerIndex":2,"explanation":"Slow down as you approach a roundabout and yield to all traffic already in it, then enter when there is a big enough gap.","source":"Section 7, Roundabouts, p. 40"},{"id":"row-07","topic":"Right-of-way and intersections","question":"Which direction does traffic travel in a roundabout?","options":["Counterclockwise","Clockwise","Either direction, depending on your exit"],"answerIndex":0,"explanation":"In a roundabout, traffic travels in a counterclockwise direction around a central island. Do not stop or pass inside it.","source":"Section 7, Roundabouts, p. 40"},{"id":"row-08","topic":"Right-of-way and intersections","question":"You miss your exit in a roundabout. What should you do?","options":["Stop and back up to the exit","Continue around until you return to your exit","Cut across the central island"],"answerIndex":1,"explanation":"If you miss your exit, continue around the roundabout until you return to your exit.","source":"Section 7, Roundabouts, p. 40"},{"id":"row-09","topic":"Right-of-way and intersections","question":"A blind pedestrian pulls in their white cane and steps away from the intersection. What does this usually mean?","options":["They need your help to cross","You must honk to let them know you are there","You may go"],"answerIndex":2,"explanation":"When a blind person pulls in their cane and steps away from the intersection, this gesture usually means you may go. Never honk at a blind person.","source":"Section 7, Pedestrians Who Are Blind, p. 42"},{"id":"row-10","topic":"Right-of-way and intersections","question":"Two vehicles meet on a steep, narrow mountain road where neither can pass. Which vehicle has the right-of-way?","options":["The vehicle facing uphill","The vehicle facing downhill","The larger vehicle"],"answerIndex":0,"explanation":"The vehicle facing uphill has the right-of-way. The vehicle facing downhill has more control when backing up and should back up.","source":"Section 7, Mountain Roads, p. 42"},{"id":"row-11","topic":"Right-of-way and intersections","question":"A pedestrian waiting at a corner makes eye contact with you. What does this mean?","options":["They are letting you go first","They are ready to cross, so you should yield","Nothing; continue at your normal speed"],"answerIndex":1,"explanation":"If a pedestrian makes eye contact with you, they are ready to cross the street. Yield to the pedestrian.","source":"Section 7, Pedestrians, p. 41"},{"id":"row-12","topic":"Right-of-way and intersections","question":"Do pedestrians have the right-of-way in an unmarked crosswalk?","options":["No, only in crosswalks with white lines","Only when a WALK signal is showing","Yes, in both marked and unmarked crosswalks"],"answerIndex":2,"explanation":"Not all crosswalks are marked. Pedestrians have the right-of-way in marked or unmarked crosswalks.","source":"Section 7, Crosswalks, p. 41"},{"id":"row-13","topic":"Right-of-way and intersections","question":"An emergency vehicle with a siren and red lights approaches while you are in an intersection. What should you do?","options":["Continue through the intersection, then drive to the right and stop","Stop immediately in the intersection","Back out of the intersection"],"answerIndex":0,"explanation":"If you are in an intersection when you see an emergency vehicle, continue through it, then drive to the right as soon as it is safe and stop.","source":"Section 7, Emergency Vehicles, p. 45"},{"id":"row-14","topic":"Right-of-way and intersections","question":"It is illegal to follow within how many feet of a fire engine, police vehicle, or ambulance that has its siren or flashing lights on?","options":["100 feet","300 feet","500 feet"],"answerIndex":1,"explanation":"It is against the law to follow within 300 feet of any emergency vehicle when its siren or flashing lights are on.","source":"Section 7, Emergency Vehicles, p. 45"},{"id":"row-15","topic":"Right-of-way and intersections","question":"You are entering a highway from an on-ramp. Who has the right-of-way?","options":["You do, because you are merging","Whoever is going faster","Traffic already on the highway"],"answerIndex":2,"explanation":"Highway traffic has the right-of-way. Merge into a space large enough for your vehicle when it is safe to do so.","source":"Section 6, Merging, p. 23"},{"id":"spd-01","topic":"Speed limits","question":"Unless otherwise posted, what is the maximum speed limit on most California highways?","options":["55 mph","65 mph","70 mph"],"answerIndex":1,"explanation":"Unless otherwise posted, the maximum speed limit on most California highways is 65 mph.","source":"Section 8, Manage Your Speed, p. 67"},{"id":"spd-02","topic":"Speed limits","question":"Unless otherwise posted, what is the maximum speed limit on a two-lane undivided highway?","options":["55 mph","50 mph","65 mph"],"answerIndex":0,"explanation":"The speed limit is 55 mph on a two-lane undivided highway unless otherwise posted.","source":"Section 8, Manage Your Speed, p. 67"},{"id":"spd-03","topic":"Speed limits","question":"What is the maximum speed limit for a vehicle towing a trailer, unless otherwise posted?","options":["45 mph","65 mph","55 mph"],"answerIndex":2,"explanation":"The 55 mph limit applies to vehicles towing trailers unless otherwise posted.","source":"Section 8, Manage Your Speed, p. 67"},{"id":"spd-04","topic":"Speed limits","question":"What does California's Basic Speed Law say?","options":["You may always drive at the posted speed limit","You may never drive faster than is safe for current conditions","You must keep up with the flow of traffic"],"answerIndex":1,"explanation":"Under the Basic Speed Law, you may never drive faster than is safe for current road conditions, whatever the posted limit.","source":"Section 8, Manage Your Speed, p. 67"},{"id":"spd-05","topic":"Speed limits","question":"What is the speed limit within 500 feet of a school while children are outside or crossing the street?","options":["25 mph","35 mph","20 mph"],"answerIndex":0,"explanation":"The speed limit is 25 mph within 500 feet of a school while children are outside or crossing the street. Some school zones are as low as 15 mph.","source":"Section 7, Around Children, p. 50"},{"id":"spd-06","topic":"Speed limits","question":"What is the speed limit at a blind intersection?","options":["10 mph","25 mph","15 mph"],"answerIndex":2,"explanation":"An intersection is blind if it has no stop signs at any corner and your view is blocked. Its speed limit is 15 mph.","source":"Section 7, Blind Intersections, p. 51"},{"id":"spd-07","topic":"Speed limits","question":"What is the speed limit in an alley?","options":["15 mph","20 mph","25 mph"],"answerIndex":0,"explanation":"An alley is a road no wider than 25 feet used to reach the rear or side of buildings. The speed limit in an alley is 15 mph.","source":"Section 7, Alleys, p. 51"},{"id":"spd-08","topic":"Speed limits","question":"Within 100 feet of a railroad crossing where you cannot see the tracks for 400 feet in both directions, the speed limit is:","options":["25 mph","15 mph","10 mph"],"answerIndex":1,"explanation":"The limit is 15 mph within 100 feet of such a crossing, unless the crossing is controlled by gates, a warning signal, or a flagman.","source":"Section 7, Near Railroad or Light Rail Tracks, p. 51"},{"id":"spd-09","topic":"Speed limits","question":"Unless otherwise posted, what is the speed limit in business or residential districts?","options":["30 mph","35 mph","25 mph"],"answerIndex":2,"explanation":"The speed limit in business or residential districts is 25 mph unless otherwise posted.","source":"Section 7, Business or Residential Districts, p. 52"},{"id":"spd-10","topic":"Speed limits","question":"How much should you reduce your speed on a wet road?","options":["By 5 to 10 mph","By half","To no more than 5 mph"],"answerIndex":0,"explanation":"On a wet road, reduce your speed by 5 to 10 mph. Packed snow calls for half your speed, and ice for no more than 5 mph.","source":"Section 8, Slippery Roads, p. 61"},{"id":"spd-11","topic":"Speed limits","question":"In a heavy storm you cannot see farther than 100 feet ahead. What is the fastest speed that is safe?","options":["15 mph","30 mph","45 mph"],"answerIndex":1,"explanation":"If you cannot see farther than 100 feet, it is not safe to drive faster than 30 mph.","source":"Section 8, Slippery Roads, p. 62"},{"id":"spd-12","topic":"Speed limits","question":"Can you be cited for driving slower than the speed limit?","options":["No, driving slowly is always legal","Only on freeways","Yes, if you block normal and reasonable traffic flow"],"answerIndex":2,"explanation":"You should not block normal and reasonable traffic flow by driving too slowly. If you drive faster or slower than the speed limit, you may be cited.","source":"Section 7, Heavy Traffic or Bad Weather, p. 50"},{"id":"lan-01","topic":"Lane use, turns, passing","question":"On a multilane road, which lane is the Number 1 Lane?","options":["The far-left (fast) lane","The far-right lane","The lane closest to the on-ramp"],"answerIndex":0,"explanation":"Lanes are numbered from the left. The left, or fast, lane is the Number 1 Lane.","source":"Section 6, Choosing a Lane, p. 15"},{"id":"lan-02","topic":"Lane use, turns, passing","question":"Which lane should you use to enter or exit traffic?","options":["The left lane","The right lane","The center lane"],"answerIndex":1,"explanation":"Use the right lane to enter or exit traffic, or when entering the road from a curb or shoulder. Use the left lane to pass or turn left.","source":"Section 6, Choosing a Lane, p. 15"},{"id":"lan-03","topic":"Lane use, turns, passing","question":"How far ahead should you signal before you turn?","options":["At least 50 feet","Just as you begin the turn","At least 100 feet"],"answerIndex":2,"explanation":"Signal at least 100 feet before you turn.","source":"Section 5, Signaling, p. 11"},{"id":"lan-04","topic":"Lane use, turns, passing","question":"Before changing lanes on a freeway, how long should you signal?","options":["At least five seconds","At least two seconds","At least ten seconds"],"answerIndex":0,"explanation":"Signal at least five seconds before you change lanes on a freeway.","source":"Section 5, Signaling, p. 11"},{"id":"lan-05","topic":"Lane use, turns, passing","question":"What is the farthest you may drive in a center left turn lane?","options":["100 feet","200 feet","500 feet"],"answerIndex":1,"explanation":"A center left turn lane is only for preparing for and making a left turn or U-turn. You may drive in it for no more than 200 feet.","source":"Section 6, Center Left Turn Lanes, p. 16"},{"id":"lan-06","topic":"Lane use, turns, passing","question":"You are driving slowly on a two-lane road where passing is unsafe. You must use a turnout to let others pass when how many vehicles are following you?","options":["Three or more","Ten or more","Five or more"],"answerIndex":2,"explanation":"You must use a turnout area or lane when driving slowly on a two-lane road where passing is unsafe and five or more vehicles are following you.","source":"Section 6, Turnout Areas or Lanes, p. 16"},{"id":"lan-07","topic":"Lane use, turns, passing","question":"When may you drive in a bicycle lane to make a turn?","options":["Within 200 feet of the intersection","Anywhere along the block","Never"],"answerIndex":0,"explanation":"You may drive in a bike lane when turning within 200 feet of an intersection. Check your blind spots for bicyclists first.","source":"Section 6, Bicycle Lanes, p. 17"},{"id":"lan-08","topic":"Lane use, turns, passing","question":"While waiting to turn left, why should you keep your wheels pointed straight ahead?","options":["So you can turn more sharply","So a rear-end collision won't push you into oncoming traffic","So oncoming drivers can see your turn signal"],"answerIndex":1,"explanation":"If your wheels are pointed left and a vehicle hits you from behind, you could be pushed into oncoming traffic.","source":"Section 6, Left Turns, p. 19"},{"id":"lan-09","topic":"Lane use, turns, passing","question":"When may you turn left against a red light?","options":["Never","From a two-way street onto a one-way street","From a one-way street onto a one-way street, after stopping, if no sign prohibits it"],"answerIndex":2,"explanation":"You may turn left against a red light when turning from a one-way street onto a one-way street, if no sign prohibits it. Yield to traffic and pedestrians with a green light.","source":"Section 6, Left Turn Against a Red Light, p. 20"},{"id":"lan-10","topic":"Lane use, turns, passing","question":"In a residential district, you may make a U-turn if no vehicles are approaching within:","options":["200 feet","100 feet","50 feet"],"answerIndex":0,"explanation":"You may make a U-turn in a residential district if no vehicles are approaching within 200 feet.","source":"Section 6, U-Turn, p. 20"},{"id":"lan-11","topic":"Lane use, turns, passing","question":"Where is a U-turn never allowed?","options":["At an intersection on a green light with no NO U-TURN sign","On a one-way street","Across a double yellow line"],"answerIndex":1,"explanation":"Never make a U-turn on a one-way street. U-turns across a double yellow line, and at intersections on a green light, are allowed unless a sign prohibits them.","source":"Section 6, U-Turn, p. 20"},{"id":"lan-12","topic":"Lane use, turns, passing","question":"To pass safely before a hill or curve, how far ahead should the hill or curve be?","options":["At least 500 feet","At least one-quarter mile","At least one-third of a mile"],"answerIndex":2,"explanation":"To pass safely, a hill or curve should be at least one-third of a mile ahead.","source":"Section 6, Passing, p. 24"},{"id":"lan-13","topic":"Lane use, turns, passing","question":"Do not pass within how many feet of an intersection, bridge, tunnel, or railroad crossing?","options":["100 feet","50 feet","200 feet"],"answerIndex":0,"explanation":"Do not pass within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.","source":"Section 6, Passing, p. 24"},{"id":"lan-14","topic":"Lane use, turns, passing","question":"When may you pass another vehicle on the right?","options":["When the shoulder is wide and paved","When the driver ahead is turning left and you can safely pass on the right","Whenever the vehicle ahead is under the speed limit"],"answerIndex":1,"explanation":"You may pass on the right on an open highway with two or more lanes in your direction, when the driver ahead is turning left, or on a one-way street. Never drive off the paved road to pass.","source":"Section 6, How to Pass, p. 25"},{"id":"lan-15","topic":"Lane use, turns, passing","question":"To merge or enter traffic on the highway, how much space do you need?","options":["Half a block, about 150 feet","Two car lengths","A full block, about 300 feet"],"answerIndex":2,"explanation":"You need about half a block (150 feet) on city streets and a full block (about 300 feet) on the highway.","source":"Section 6, Crossing or Entering Traffic, p. 24"},{"id":"prk-01","topic":"Parking","question":"What does a white painted curb mean?","options":["Stop only long enough to pick up or drop off passengers","Park for a limited time","Load and unload freight only"],"answerIndex":0,"explanation":"A white curb means stop only long enough to pick up or drop off passengers.","source":"Section 6, Parking at Colored Curbs, p. 28"},{"id":"prk-02","topic":"Parking","question":"What does a green painted curb mean?","options":["No stopping, standing, or parking","Park for a limited time","Disabled parking only"],"answerIndex":1,"explanation":"A green curb means park for a limited time. The limit may be posted on a sign or painted on the curb.","source":"Section 6, Parking at Colored Curbs, p. 28"},{"id":"prk-03","topic":"Parking","question":"What does a red painted curb mean?","options":["Load and unload passengers and freight","Park for up to 15 minutes","No stopping, standing, or parking"],"answerIndex":2,"explanation":"A red curb means no stopping, standing, or parking. Buses may stop at a red zone marked for buses.","source":"Section 6, Parking at Colored Curbs, p. 28"},{"id":"prk-04","topic":"Parking","question":"A yellow painted curb means:","options":["Load and unload passengers and freight, no longer than the time posted","Pick up or drop off passengers only","Parking for vehicles with a disabled placard"],"answerIndex":0,"explanation":"A yellow curb is for loading and unloading passengers and freight. Do not stop longer than the posted time.","source":"Section 6, Parking at Colored Curbs, p. 28"},{"id":"prk-05","topic":"Parking","question":"When parking headed downhill next to a curb, which way should you turn your front wheels?","options":["Away from the curb","Toward the curb","Straight ahead"],"answerIndex":1,"explanation":"Headed downhill, turn your front wheels into the curb, toward the side of the road.","source":"Section 6, Parking on a Hill, p. 27"},{"id":"prk-06","topic":"Parking","question":"When parking headed uphill next to a curb, which way should you turn your front wheels?","options":["Toward the curb","Straight ahead","Away from the curb"],"answerIndex":2,"explanation":"Headed uphill, turn your front wheels away from the curb and let the vehicle roll back a few inches until a wheel gently touches the curb.","source":"Section 6, Parking on a Hill, p. 27"},{"id":"prk-07","topic":"Parking","question":"When parking on a hill with no curb, which way should you turn your wheels?","options":["To the right, toward the shoulder","To the left, toward the center of the road","Straight ahead"],"answerIndex":0,"explanation":"With no curb, turn the wheels to the right so the vehicle will roll away from the center of the road if the brakes fail.","source":"Section 6, Parking on a Hill, p. 27"},{"id":"prk-08","topic":"Parking","question":"You may not park within how many feet of a fire hydrant?","options":["10 feet","15 feet","20 feet"],"answerIndex":1,"explanation":"Never park within 15 feet of a fire hydrant or fire station driveway.","source":"Section 6, Illegal Parking, p. 28"},{"id":"prk-09","topic":"Parking","question":"You may not park within how many feet of a marked or unmarked crosswalk, where there is no curb extension?","options":["10 feet","15 feet","20 feet"],"answerIndex":2,"explanation":"Never park within 20 feet of a marked or unmarked crosswalk, or within 15 feet where a curb extension is present.","source":"Section 6, Illegal Parking, p. 28"},{"id":"prk-10","topic":"Parking","question":"When parallel parked, your vehicle should be within how many inches of the curb?","options":["18 inches","24 inches","12 inches"],"answerIndex":0,"explanation":"When you finish parallel parking, your vehicle should be parallel to and within 18 inches of the curb.","source":"Section 6, Parallel Parking, p. 26"},{"id":"sgn-01","topic":"Signs, signals, pavement markings","question":"What does a flashing red traffic light mean?","options":["Slow down and proceed with caution","Stop, then go when it is safe","The light is about to turn green"],"answerIndex":1,"explanation":"A flashing red light means STOP. After stopping, you may go when it is safe.","source":"Section 7, Traffic Signals, p. 33"},{"id":"sgn-02","topic":"Signs, signals, pavement markings","question":"What does a flashing yellow traffic light mean?","options":["Stop before the intersection","The light is about to turn red","Proceed with caution; you do not need to stop"],"answerIndex":2,"explanation":"A flashing yellow light is a warning to proceed with caution. Slow down and be alert, but you do not need to stop.","source":"Section 7, Traffic Signals, p. 34"},{"id":"sgn-03","topic":"Signs, signals, pavement markings","question":"Can you turn right at a red arrow?","options":["No, remain stopped until a green light or green arrow appears","Yes, after a complete stop","Yes, if no pedestrians are present"],"answerIndex":0,"explanation":"A red arrow means STOP. Do not turn at a red arrow; remain stopped until a green light or green arrow appears.","source":"Section 7, Traffic Signals, p. 33"},{"id":"sgn-04","topic":"Signs, signals, pavement markings","question":"What does a flashing yellow arrow mean?","options":["Your turn is protected; oncoming traffic is stopped","You may turn after yielding to oncoming traffic; the turn is not protected","Stop and wait for a green arrow"],"answerIndex":1,"explanation":"With a flashing yellow arrow you can turn, but the turn is not protected. Yield to oncoming traffic and proceed with caution.","source":"Section 7, Traffic Signals, p. 34"},{"id":"sgn-05","topic":"Signs, signals, pavement markings","question":"What does a solid yellow arrow mean?","options":["You may turn after yielding","Oncoming traffic is stopped","The protected turning time is ending"],"answerIndex":2,"explanation":"A yellow arrow means the protected turning time is ending and the signal will change soon.","source":"Section 7, Traffic Signals, p. 33"},{"id":"sgn-06","topic":"Signs, signals, pavement markings","question":"A traffic light is not working. What should you do?","options":["Stop as if there were STOP signs in all directions","Drive through slowly if no one is coming","Yield only to traffic on your right"],"answerIndex":0,"explanation":"When a traffic light is not working, stop as if the intersection were controlled by STOP signs in all directions, then proceed when safe.","source":"Section 7, Traffic Signals, p. 34"},{"id":"sgn-07","topic":"Signs, signals, pavement markings","question":"The pedestrian signal shows a flashing DON'T WALK. A pedestrian is still in the crosswalk. What must you do?","options":["Proceed, because the signal now favors vehicles","Yield to the pedestrian","Honk so they finish crossing quickly"],"answerIndex":1,"explanation":"Drivers must yield to pedestrians, even if the DON'T WALK light is flashing.","source":"Section 7, Pedestrian Signals or Signs, p. 35"},{"id":"sgn-08","topic":"Signs, signals, pavement markings","question":"Where should you stop at a STOP sign that has a limit line?","options":["Past the limit line, where you can see","Halfway into the crosswalk","At the limit line"],"answerIndex":2,"explanation":"Make a full stop at the limit line or before the crosswalk. If there is neither, stop before entering the intersection.","source":"Section 7, Signs, p. 35"},{"id":"sgn-09","topic":"Signs, signals, pavement markings","question":"What should you do at a red YIELD sign?","options":["Slow down and be ready to stop to let traffic and pedestrians pass","Come to a full stop every time","Speed up to merge ahead of traffic"],"answerIndex":0,"explanation":"At a YIELD sign, slow down and be ready to stop to let any vehicle, bicyclist, or pedestrian pass before you proceed.","source":"Section 7, Signs, p. 35"},{"id":"sgn-10","topic":"Signs, signals, pavement markings","question":"What does a five-sided (pentagon) sign warn you about?","options":["A railroad crossing","A school zone","A no-passing zone"],"answerIndex":1,"explanation":"A 5-sided sign means you are near a school. Drive slowly and stop for children in the crosswalk.","source":"Section 7, Signs, p. 38"},{"id":"sgn-11","topic":"Signs, signals, pavement markings","question":"What does a yellow and black circular sign, or an X-shaped sign, mean?","options":["A school crossing is ahead","A hospital is nearby","You are approaching a railroad crossing"],"answerIndex":2,"explanation":"A yellow and black circular sign or an X-shaped sign means you are approaching a railroad crossing. Look, listen, slow down, and prepare to stop.","source":"Section 7, Signs, p. 38"},{"id":"sgn-12","topic":"Signs, signals, pavement markings","question":"Diamond-shaped signs:","options":["Warn you of specific road conditions and dangers ahead","Show the rules you must obey","Give directions to cities"],"answerIndex":0,"explanation":"Diamond-shaped signs warn you of specific road conditions and dangers ahead.","source":"Section 7, Signs, p. 38"},{"id":"sgn-13","topic":"Signs, signals, pavement markings","question":"You are driving at night and the road reflectors shine red in your headlights. What does this mean?","options":["You are approaching a work zone","You are going the wrong way","A railroad crossing is ahead"],"answerIndex":1,"explanation":"At night, road reflectors that shine red in your headlights mean you are going the wrong way. When safe, back out or turn around.","source":"Section 7, Signs, p. 38"},{"id":"sgn-14","topic":"Signs, signals, pavement markings","question":"What does a red circle with a red line through it mean?","options":["The road ahead is closed","Yield to cross traffic","You cannot do what is shown inside the circle"],"answerIndex":2,"explanation":"The picture inside a red circle with a red line through it shows what you cannot do.","source":"Section 7, Signs, p. 38"},{"id":"sgn-15","topic":"Signs, signals, pavement markings","question":"What does a broken yellow line next to your lane mean?","options":["You may pass when it is safe","You may never pass","The lane is ending"],"answerIndex":0,"explanation":"A broken yellow line indicates you may pass if it is next to your lane. Only pass when it is safe.","source":"Section 6, Lane Markings, p. 13"},{"id":"sgn-16","topic":"Signs, signals, pavement markings","question":"Two sets of double solid yellow lines spaced two or more feet apart are:","options":["A center left turn lane","A barrier you must not drive on or turn across, except at openings","A passing zone for both directions"],"answerIndex":1,"explanation":"Two sets of double yellow lines two or more feet apart are a barrier. Do not drive over it, turn left, or make a U-turn across it except at designated openings.","source":"Section 6, Lane Markings, p. 13"},{"id":"sgn-17","topic":"Signs, signals, pavement markings","question":"What should you do at double solid white lines?","options":["Cross them only to pass","Cross them only to enter an HOV lane","Never change lanes over them"],"answerIndex":2,"explanation":"Double solid white lines are a lane barrier, such as next to a carpool lane. Never change lanes over them; wait for a single broken white line.","source":"Section 6, Lane Markings, p. 14"},{"id":"sgn-18","topic":"Signs, signals, pavement markings","question":"What does a line of solid white triangles across your lane show?","options":["Where to yield or stop","A speed bump ahead","The start of a bike lane"],"answerIndex":0,"explanation":"A yield line is a row of solid white triangles that shows approaching vehicles where to yield or stop. The triangles point toward approaching vehicles.","source":"Section 6, Lane Markings, p. 14"},{"id":"sgn-19","topic":"Signs, signals, pavement markings","question":"How is a center left turn lane marked?","options":["Two solid yellow lines on each side","A solid outer line and a broken inner line on each side","A white diamond symbol"],"answerIndex":1,"explanation":"A center left turn lane is marked on both sides by two painted lines. The inner line is broken and the outer line is solid.","source":"Section 6, Center Left Turn Lanes, p. 16"},{"id":"sgn-20","topic":"Signs, signals, pavement markings","question":"What is a limit line?","options":["A yellow line marking the edge of the road","A broken line marking the end of a lane","A wide white line showing where to stop before an intersection or crosswalk"],"answerIndex":2,"explanation":"A limit line is a wide white line that shows drivers where to stop before an intersection or crosswalk.","source":"Section 6, Right Turns, p. 18"},{"id":"dui-01","topic":"Alcohol, drugs, DUI laws","question":"If you are 21 or older, it is illegal to drive with a blood alcohol concentration (BAC) of:","options":["0.08% or higher","0.10% or higher","0.05% or higher"],"answerIndex":0,"explanation":"It is illegal to drive with a BAC of 0.08% or higher if you are over 21 years old.","source":"Section 9, Blood Alcohol Concentration (BAC) Limits, p. 73"},{"id":"dui-02","topic":"Alcohol, drugs, DUI laws","question":"If you are under 21, it is illegal to drive with a BAC of:","options":["0.05% or higher","0.01% or higher","0.08% or higher"],"answerIndex":1,"explanation":"It is illegal to drive with a BAC of 0.01% or higher if you are under 21.","source":"Section 9, Blood Alcohol Concentration (BAC) Limits, p. 73"},{"id":"dui-03","topic":"Alcohol, drugs, DUI laws","question":"What is the illegal BAC for someone driving a passenger for hire?","options":["0.08% or higher","0.01% or higher","0.04% or higher"],"answerIndex":2,"explanation":"It is illegal to drive with a BAC of 0.04% or higher when driving a passenger for hire or a vehicle that requires a commercial license.","source":"Section 9, Blood Alcohol Concentration (BAC) Limits, p. 73"},{"id":"dui-04","topic":"Alcohol, drugs, DUI laws","question":"At any age, a driver on DUI probation may not drive with a BAC of:","options":["0.01% or higher","0.04% or higher","0.08% or higher"],"answerIndex":0,"explanation":"It is illegal to drive with a BAC of 0.01% or higher at any age if you are on DUI probation.","source":"Section 9, Blood Alcohol Concentration (BAC) Limits, p. 73"},{"id":"dui-05","topic":"Alcohol, drugs, DUI laws","question":"An officer suspects you of DUI and you refuse a blood or urine test. What happens?","options":["Nothing, because the test is voluntary","DMV suspends or revokes your driving privilege for one year","You receive a warning for a first refusal"],"answerIndex":1,"explanation":"If you refuse to take the test, DMV will suspend or revoke your driving privilege for one year.","source":"Section 9, Alcohol and Drugs, p. 72"},{"id":"dui-06","topic":"Alcohol, drugs, DUI laws","question":"Which drugs can get you a DUI?","options":["Only illegal drugs","Only drugs without a prescription","Any drug that affects your ability to drive, including prescription and over-the-counter medicines"],"answerIndex":2,"explanation":"The law does not see a difference between illegal drugs and medications from a doctor or pharmacy. Any drug that affects your driving counts.","source":"Section 9, Alcohol and Drugs, p. 72"},{"id":"dui-07","topic":"Alcohol, drugs, DUI laws","question":"Where may you carry an opened container of alcohol in a car?","options":["In the trunk or a place where passengers do not sit","In the glove box","Under the passenger seat"],"answerIndex":0,"explanation":"An open container must be kept in the trunk or where passengers do not sit. It is illegal to keep one in your glove box.","source":"Section 9, Use or Possession of Alcohol or Cannabis Products in a Vehicle, p. 72"},{"id":"dui-08","topic":"Alcohol, drugs, DUI laws","question":"If you are arrested for DUI, the officer may take your license and issue a temporary license valid for:","options":["10 days","30 days","90 days"],"answerIndex":1,"explanation":"The officer may take your driver's license and give you a temporary license for 30 days.","source":"Section 9, DUI Arrests, p. 74"},{"id":"dui-09","topic":"Alcohol, drugs, DUI laws","question":"After a DUI arrest, you have how many days to request a DMV administrative hearing?","options":["30 days","5 days","10 days"],"answerIndex":2,"explanation":"You may request a DMV administrative hearing within 10 days from the date of your arrest.","source":"Section 9, DUI Arrests, p. 74"},{"id":"dui-10","topic":"Alcohol, drugs, DUI laws","question":"How long do DUI convictions stay on your driver's record?","options":["10 years","3 years","7 years"],"answerIndex":0,"explanation":"All DUI convictions remain on your driver's record for 10 years.","source":"Section 9, DUI Convictions, p. 74"},{"id":"dui-11","topic":"Alcohol, drugs, DUI laws","question":"If you are under 21, when may you carry alcohol in a vehicle?","options":["Never, under any circumstances","When someone 21 or older is with you and the container is full, sealed, and unopened","Whenever the container is in the trunk"],"answerIndex":1,"explanation":"Under 21, you may not carry alcohol in a vehicle unless someone 21 or older is with you, and the container must be full, sealed, and unopened.","source":"Section 9, Drivers Under 21, p. 75"},{"id":"dui-12","topic":"Alcohol, drugs, DUI laws","question":"About how much does your BAC drop for each 40 minutes between drinks?","options":["0.04%","0.02%","0.01%"],"answerIndex":2,"explanation":"The handbook's BAC table says to subtract 0.01% for each 40 minutes that pass between drinks.","source":"Section 9, BAC table, p. 73"},{"id":"shr-01","topic":"Sharing the road","question":"If you cannot see a truck driver's side mirrors, what does that mean?","options":["The truck driver cannot see you","The truck is about to turn","You are at a safe following distance"],"answerIndex":0,"explanation":"Large trucks have big blind spots, called No Zones. If you cannot see the truck's side mirrors, the truck driver cannot see you.","source":"Section 7, Blind Spots (the No Zone), p. 42"},{"id":"shr-02","topic":"Sharing the road","question":"At 55 mph, a passenger vehicle can stop within about 300 feet. How far might a large vehicle need at the same speed?","options":["About 200 feet","Up to 400 feet","About 300 feet"],"answerIndex":1,"explanation":"A large vehicle traveling at 55 mph can take up to 400 feet to stop. Don't move in front of one and suddenly slow down.","source":"Section 7, Braking, p. 42"},{"id":"shr-03","topic":"Sharing the road","question":"Why do large trucks often swing wide when turning?","options":["To see around corners","To avoid potholes near the curb","Their rear wheels follow a shorter path than the front wheels"],"answerIndex":2,"explanation":"When a vehicle turns, the rear wheels follow a shorter path than the front wheels, so long trucks must often swing wide.","source":"Section 7, Turning, p. 43"},{"id":"shr-04","topic":"Sharing the road","question":"On which side should you pass a large vehicle?","options":["The left side","The right side","Either side"],"answerIndex":0,"explanation":"Always pass a large vehicle on the left side, then move ahead of it. Don't drive alongside it longer than necessary.","source":"Section 7, Maneuvering, p. 43"},{"id":"shr-05","topic":"Sharing the road","question":"What following distance should you allow behind a motorcycle?","options":["One second","Three seconds","One car length"],"answerIndex":1,"explanation":"Allow a safe three-second following distance so you can avoid a motorcyclist who brakes suddenly or falls.","source":"Section 7, Motorcycles, p. 44"},{"id":"shr-06","topic":"Sharing the road","question":"Is lane splitting by motorcycles legal in California?","options":["No, it is always illegal","Only on freeways after dark","Yes, it is legal to share lanes with motorcycles"],"answerIndex":2,"explanation":"It is legal to share lanes with motorcycles, known as lane splitting. Whenever possible, give a motorcycle the full lane.","source":"Section 7, Motorcycles, p. 44"},{"id":"shr-07","topic":"Sharing the road","question":"If you cannot change lanes to pass a bicyclist, how much space must you allow?","options":["At least three feet","At least one foot","At least six feet"],"answerIndex":0,"explanation":"Allow at least three feet between your vehicle and the bicyclist. If you can't, do not pass until you can.","source":"Section 7, Passing a Bicyclist, p. 48"},{"id":"shr-08","topic":"Sharing the road","question":"Which bicyclists must wear a helmet?","options":["All bicyclists","Bicyclists under 18 years old","Bicyclists riding at night"],"answerIndex":1,"explanation":"Wearing a helmet is required for bicyclists under 18 years old.","source":"Section 7, Bicyclist Responsibilities, p. 47"},{"id":"shr-09","topic":"Sharing the road","question":"A school bus ahead of you is flashing red lights. What must you do?","options":["Slow to 25 mph and pass carefully","Stop only if you are behind the bus","Stop from either direction until the children have crossed and the lights stop flashing"],"answerIndex":2,"explanation":"When a school bus flashes red lights, stop from either direction and remain stopped until the children are across and the lights stop flashing.","source":"Section 7, Around Children, p. 51"},{"id":"shr-10","topic":"Sharing the road","question":"When do you NOT need to stop for a school bus with flashing red lights?","options":["When it is on the other side of a divided or multilane highway","When no children are visible","When you are running late for school"],"answerIndex":0,"explanation":"You do not need to stop if the school bus is on the other side of a divided or multilane highway with two or more lanes in each direction.","source":"Section 7, Around Children, p. 51"},{"id":"shr-11","topic":"Sharing the road","question":"What do flashing yellow lights on a school bus mean?","options":["The bus is broken down","Slow down and prepare to stop","Pass quickly before the bus stops"],"answerIndex":1,"explanation":"Some school buses flash yellow lights when preparing to stop. They warn you to slow down and prepare to stop.","source":"Section 7, Around Children, p. 50"},{"id":"shr-12","topic":"Sharing the road","question":"A bus is stopped at a safety zone. What is the fastest speed at which you may pass it?","options":["5 mph","15 mph","10 mph"],"answerIndex":2,"explanation":"When a bus, streetcar, or trolley is stopped at a safety zone or traffic light, you may pass at no more than 10 mph. Never drive through a safety zone.","source":"Section 7, Buses, Streetcars, Trolleys, p. 43"},{"id":"shr-13","topic":"Sharing the road","question":"A vehicle ahead has stopped at a crosswalk. What should you do?","options":["Do not pass it; a pedestrian you cannot see may be crossing","Pass it carefully on the left","Honk and go around it"],"answerIndex":0,"explanation":"Do not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street.","source":"Section 7, Pedestrians, p. 41"},{"id":"shr-14","topic":"Sharing the road","question":"How should you share the road with a light rail vehicle?","options":["Turn in front of it if you can beat it","Never turn in front of an approaching light rail vehicle","Pass it on the left whenever it stops"],"answerIndex":1,"explanation":"Light rail vehicles have the same rights as other vehicles. Never turn in front of an approaching one, and keep a safe distance.","source":"Section 7, Light Rail Vehicles, p. 44"},{"id":"emg-01","topic":"Emergencies and hazardous conditions","question":"Your car starts to skid on a slippery surface. What should you do?","options":["Brake hard and steer away from the skid","Speed up to regain traction","Ease off the accelerator, don't brake, and steer in the direction of the skid"],"answerIndex":2,"explanation":"If you start to skid, slowly take your foot off the accelerator, do not use the brakes, and turn the steering wheel in the direction of the skid.","source":"Section 8, Skids, p. 60"},{"id":"emg-02","topic":"Emergencies and hazardous conditions","question":"Your vehicle starts to hydroplane. What should you do?","options":["Slow down gradually and don't use the brakes","Brake firmly to stop quickly","Turn sharply toward the shoulder"],"answerIndex":0,"explanation":"If your vehicle starts to hydroplane, slow down gradually and do not use the brakes. Sudden braking can make you lose control.","source":"Section 8, Hydroplaning, p. 62"},{"id":"emg-03","topic":"Emergencies and hazardous conditions","question":"You have a tire blowout. What should you do first?","options":["Brake hard immediately","Hold the steering wheel with both hands and gradually release the accelerator","Take your foot off the accelerator abruptly and pull over at once"],"answerIndex":1,"explanation":"Don't brake suddenly or abruptly lift off the gas. Hold the wheel with both hands, keep your speed if safe, gradually release the accelerator, and steer where you want to go.","source":"Section 8, Tire Blowouts, p. 68"},{"id":"emg-04","topic":"Emergencies and hazardous conditions","question":"Your wheels drift off the pavement. What should you do?","options":["Steer back onto the pavement right away with force","Brake hard to stop on the shoulder","Grip the wheel, take your foot off the accelerator, brake gently, then carefully steer back"],"answerIndex":2,"explanation":"Grip the wheel firmly, take your foot off the accelerator, brake gently, check traffic behind you, and carefully steer back. Too much force can send you into oncoming traffic.","source":"Section 8, Driving Off the Pavement, p. 68"},{"id":"emg-05","topic":"Emergencies and hazardous conditions","question":"Your car stalls on railroad tracks, a train is coming, and the warning lights are flashing. What should you do?","options":["Get out immediately and run diagonally away from the tracks toward the direction the train is coming from","Stay in the car and try to restart it","Run straight down the tracks away from the train"],"answerIndex":0,"explanation":"Exit immediately and run away from the tracks diagonally in the direction the train is coming from. Then call 911.","source":"Section 8, Disabled Vehicles on Railroad Tracks, p. 70"},{"id":"emg-06","topic":"Emergencies and hazardous conditions","question":"Which headlights should you use when driving in heavy fog?","options":["High beams","Low beams","Parking lights only"],"answerIndex":1,"explanation":"Use low-beam headlights in fog. High beams reflect back and cause glare, and you should never drive with only parking or fog lights.","source":"Section 8, Fog or Heavy Smoke, p. 64"},{"id":"emg-07","topic":"Emergencies and hazardous conditions","question":"What should you avoid using when driving in high winds?","options":["Your seat belt","Your low-beam headlights","Cruise control"],"answerIndex":2,"explanation":"Do not use cruise control in high winds, so you keep maximum control of the accelerator if a gust hits.","source":"Section 8, High Winds, p. 63"},{"id":"emg-08","topic":"Emergencies and hazardous conditions","question":"Your vehicle breaks down on the freeway. After pulling onto the right shoulder, what should you generally do?","options":["Stay inside with your seat belt on until help arrives","Stand behind your car to warn traffic","Walk along the freeway to the nearest exit"],"answerIndex":0,"explanation":"Exit on the right side only if you must, dial 511 or use a call box, and stay inside with your seat belt on until help arrives.","source":"Section 8, If Your Vehicle Becomes Disabled on the Freeway, p. 69"},{"id":"emg-09","topic":"Emergencies and hazardous conditions","question":"When is the pavement often very slippery?","options":["After several days of steady rain","When it first starts to rain after a dry, hot spell","In the middle of a sunny afternoon"],"answerIndex":1,"explanation":"Pavement can be very slippery when it first starts to rain, especially after dry, hot weather, because oil and dust haven't been washed away.","source":"Section 8, Slippery Roads, p. 61"},{"id":"emg-10","topic":"Emergencies and hazardous conditions","question":"How should you adjust your speed on ice?","options":["Reduce it by 5 to 10 mph","Reduce it by half","Reduce it to no more than 5 mph"],"answerIndex":2,"explanation":"On ice, reduce your speed to no more than 5 mph. Bridges, overpasses, and shady spots freeze first.","source":"Section 8, Slippery Roads, p. 61"},{"id":"prv-01","topic":"Provisional license rules for minors","question":"How old must you be to apply for an instruction permit if you are under 18?","options":["15 years old","15½ years old","16 years old"],"answerIndex":1,"explanation":"If you are under 18, you must be at least 15½ years old to apply for an instruction permit.","source":"Section 2, Applying For An Instruction Permit, p. 3"},{"id":"prv-02","topic":"Provisional license rules for minors","question":"If you are under 18, how long must you hold an instruction permit before scheduling your drive test?","options":["At least 3 months","At least 12 months","At least 6 months (or until you turn 18)"],"answerIndex":2,"explanation":"Minors must have an instruction permit for at least 6 months, or turn 18, before scheduling the behind-the-wheel drive test.","source":"Section 2, Applying For A Driver's License, p. 3"},{"id":"prv-03","topic":"Provisional license rules for minors","question":"How many hours of supervised practice driving must a minor complete before the drive test?","options":["50 hours, 10 of them at night","40 hours, 5 of them at night","30 hours, 10 of them at night"],"answerIndex":0,"explanation":"Minors must practice for at least 50 hours with a California-licensed driver at least 25 years old. Ten of those hours must be at night.","source":"Section 2, Applying For A Driver's License, p. 3"},{"id":"prv-04","topic":"Provisional license rules for minors","question":"How old must the licensed driver who supervises a minor's practice driving be?","options":["At least 18","At least 25","At least 21"],"answerIndex":1,"explanation":"Minors must practice with a California-licensed driver who is at least 25 years old.","source":"Section 2, Applying For A Driver's License, p. 3"},{"id":"prv-05","topic":"Provisional license rules for minors","question":"During the first 12 months of a provisional license, you may not drive between:","options":["10 p.m. and 6 a.m.","Midnight and 5 a.m.","11 p.m. and 5 a.m."],"answerIndex":2,"explanation":"Provisional drivers cannot drive between 11 p.m. and 5 a.m. during the first 12 months they have their license, unless an exception applies.","source":"Section 2, Minor's Restrictions and Exceptions, p. 4"},{"id":"prv-06","topic":"Provisional license rules for minors","question":"A provisional driver may not carry passengers under what age unless a qualifying adult rides along?","options":["20","18","21"],"answerIndex":0,"explanation":"Provisional drivers cannot drive with passengers under 20, unless a parent or guardian, or another licensed driver at least 25, rides with them.","source":"Section 2, Minor's Restrictions and Exceptions, p. 4"},{"id":"prv-07","topic":"Provisional license rules for minors","question":"A provisional driver needs to drive at night for work. What must they carry?","options":["Nothing; work driving is always allowed","A note signed by their employer confirming the employment","A copy of their paycheck"],"answerIndex":1,"explanation":"For the work exception, a minor must carry a note signed by their employer that confirms their employment.","source":"Section 2, Minor's Restrictions and Exceptions, p. 4"},{"id":"prv-08","topic":"Provisional license rules for minors","question":"A minor fails the knowledge test. How long must they wait to retake it?","options":["14 days","24 hours","Seven days, not counting the day of the failure"],"answerIndex":2,"explanation":"Minors must wait seven days to retake a failed knowledge test, not including the day of the failure. You get three attempts before you must reapply.","source":"Section 3, Driver's License Tests, p. 5"},{"id":"prv-09","topic":"Provisional license rules for minors","question":"A minor fails the behind-the-wheel drive test. How long must they wait to retake it?","options":["14 days, not counting the day of the failure","7 days","30 days"],"answerIndex":0,"explanation":"Minors must wait 14 days to retake a failed behind-the-wheel drive test, not including the day of the failure.","source":"Section 3, Driver's License Tests, p. 6"},{"id":"prv-10","topic":"Provisional license rules for minors","question":"When may a minor use a cell phone while driving?","options":["In hands-free mode only","To make a call for emergency assistance","At red lights"],"answerIndex":1,"explanation":"It is against the law for a minor to use a cell phone while driving. The exception is calling for emergency assistance.","source":"Section 8, Minors and Cell Phones, p. 71"},{"id":"prv-11","topic":"Provisional license rules for minors","question":"Within the first 12 months, a provisional driver has two at-fault collisions or traffic convictions. What happens?","options":["Their license is revoked permanently","Nothing until a third incident","They cannot drive for 30 days unless a licensed adult at least 25 rides with them"],"answerIndex":2,"explanation":"Two at-fault collisions, two convictions, or one of each means 30 days of driving only with a licensed adult at least 25 years old.","source":"Section 7, Maintaining Your Minor's (Provisional) Driver's License, p. 55"},{"id":"prv-12","topic":"Provisional license rules for minors","question":"A provisional driver gets three at-fault collisions or traffic convictions. What is the penalty?","options":["Six months' suspension and one year of probation","30 days of supervised driving","A warning letter"],"answerIndex":0,"explanation":"Three at-fault collisions or convictions leads to a six-month suspension and one year of probation. Turning 18 does not erase it.","source":"Section 7, Maintaining Your Minor's (Provisional) Driver's License, p. 55"}]/*@questions-end*/;
+</script>
+<script>
+(function () {
+  'use strict';
+  var MOCK_SIZE = 46, MOCK_PASS = 38, PASS_RATE = MOCK_PASS / MOCK_SIZE;
+  var KEY = 'learners-lane:v1';
+  var byId = new Map(QUESTIONS.map(function (q) { return [q.id, q]; }));
+  var TOPICS = Array.from(new Set(QUESTIONS.map(function (q) { return q.topic; })));
+  var $ = function (id) { return document.getElementById(id); };
+  var reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+
+  var ICON_OK = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICON_NO = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>';
+
+  // ---------- storage (always guarded) ----------
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      var d = raw ? JSON.parse(raw) : null;
+      return d && typeof d === 'object' ? d : {};
+    } catch (e) { return {}; }
+  }
+  function save() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { /* storage blocked: quiz still works */ }
+  }
+  var data = load();
+  if (!data.history || typeof data.history !== 'object') data.history = {};
+  var session = validSession(data.session) ? data.session : null;
+
+  function validSession(s) {
+    return !!s && Array.isArray(s.items) && s.items.length > 0 &&
+      s.items.every(function (it) { return it && byId.has(it.id) && Array.isArray(it.order) && it.order.length === 3; }) &&
+      Number.isInteger(s.index) && s.index >= 0 && s.index < s.items.length && Array.isArray(s.answers);
+  }
+
+  // ---------- helpers ----------
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function show(view) {
+    ['q-start', 'q-play', 'q-end'].forEach(function (id) { $(id).hidden = id !== view; });
+  }
+  function scrollTo(el) {
+    var r = el.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight) {
+      el.scrollIntoView({ block: 'nearest', behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    }
+  }
+  function passMark(s) { return s.mode === 'mock' ? MOCK_PASS : Math.ceil(s.items.length * PASS_RATE); }
+  function correctCount(s) {
+    return s.items.reduce(function (n, it, i) { return n + (s.answers[i] === byId.get(it.id).answerIndex ? 1 : 0); }, 0);
+  }
+  function answeredCount(s) { return s.answers.filter(function (a) { return a !== null && a !== undefined; }).length; }
+
+  // ---------- start screen ----------
+  function fillTopics() {
+    var sel = $('topic');
+    var html = TOPICS.map(function (t) {
+      var n = QUESTIONS.filter(function (q) { return q.topic === t; }).length;
+      return '<option value="' + esc(t) + '">' + esc(t) + ' (' + n + ')</option>';
+    }).join('');
+    sel.innerHTML = html + '<option value="__all">All topics, shuffled (' + QUESTIONS.length + ')</option>';
+    try { if (data.lastTopic) sel.value = data.lastTopic; } catch (e) {}
+  }
+  function renderStart() {
+    var r = $('resume');
+    if (session) {
+      $('resume-text').textContent = 'You have a ' + (session.mode === 'mock' ? 'mock test' : session.label.toLowerCase() + ' session') +
+        ' in progress: question ' + (session.index + 1) + ' of ' + session.items.length + '.';
+      r.hidden = false;
+    } else r.hidden = true;
+    var m = data.history.mock, lm = $('last-mock');
+    if (m) { lm.textContent = 'Last mock test: ' + m.score + ' of ' + m.total + ', ' + (m.passed ? 'passed.' : 'not passed yet.'); lm.hidden = false; }
+    else lm.hidden = true;
+    var tp = data.history.topics && data.history.topics[$('topic').value], lt = $('last-topic');
+    if (tp) { lt.textContent = 'Last time on this topic: ' + tp.score + ' of ' + tp.total + '.'; lt.hidden = false; }
+    else lt.hidden = true;
+    show('q-start');
+  }
+
+  function begin(mode, ids, label) {
+    session = {
+      mode: mode, label: label,
+      items: shuffle(ids).map(function (id) { return { id: id, order: shuffle([0, 1, 2]) }; }),
+      index: 0, answers: []
+    };
+    data.session = session; save();
+    show('q-play');
+    renderQuestion();
+    scrollTo($('quiz'));
+    $('q-text').focus({ preventScroll: true });
+  }
+  function startMock() {
+    begin('mock', shuffle(QUESTIONS.map(function (q) { return q.id; })).slice(0, MOCK_SIZE), 'Mock test');
+  }
+  function startTopic() {
+    var t = $('topic').value;
+    data.lastTopic = t;
+    var pool = t === '__all' ? QUESTIONS : QUESTIONS.filter(function (q) { return q.topic === t; });
+    begin('topic', pool.map(function (q) { return q.id; }), t === '__all' ? 'All topics' : t);
+  }
+
+  // ---------- question ----------
+  function updateProgress() {
+    var s = session, done = answeredCount(s), total = s.items.length;
+    var lane = $('q-lane');
+    lane.style.setProperty('--p', (done / total * 100) + '%');
+    lane.setAttribute('aria-valuemax', total);
+    lane.setAttribute('aria-valuenow', done);
+    lane.setAttribute('aria-valuetext', done + ' of ' + total + ' answered');
+    var right = correctCount(s);
+    $('q-score').textContent = 'Score: ' + right + ' correct' + (done - right ? ', ' + (done - right) + ' missed' : '');
+  }
+  function renderQuestion() {
+    var s = session, it = s.items[s.index], q = byId.get(it.id);
+    $('q-label').textContent = s.label;
+    $('q-count').textContent = 'Question ' + (s.index + 1) + ' of ' + s.items.length;
+    $('q-topic').textContent = q.topic;
+    $('q-text').textContent = q.question;
+    $('q-options').innerHTML = it.order.map(function (orig, pos) {
+      return '<button type="button" class="option" data-pos="' + pos + '">' +
+        '<span class="key" aria-hidden="true">' + (pos + 1) + '</span>' +
+        '<span class="opt-text">' + esc(q.options[orig]) + '</span>' +
+        '<span class="verdict"></span></button>';
+    }).join('');
+    var fb = $('q-feedback'); fb.innerHTML = ''; fb.className = 'feedback';
+    $('q-next').hidden = true;
+    updateProgress();
+    if (s.answers[s.index] !== null && s.answers[s.index] !== undefined) showResult(false);
+  }
+  function answer(pos) {
+    var s = session;
+    if (!s || (s.answers[s.index] !== null && s.answers[s.index] !== undefined)) return;
+    s.answers[s.index] = s.items[s.index].order[pos];
+    data.session = s; save();
+    showResult(true);
+  }
+  function showResult(fresh) {
+    var s = session, it = s.items[s.index], q = byId.get(it.id);
+    var chosen = s.answers[s.index], ok = chosen === q.answerIndex;
+    var buttons = $('q-options').querySelectorAll('.option');
+    buttons.forEach(function (b, pos) {
+      var orig = it.order[pos];
+      b.disabled = true;
+      var v = b.querySelector('.verdict');
+      if (orig === q.answerIndex) { b.classList.add('is-correct'); v.innerHTML = ICON_OK + (ok ? 'Your answer: correct' : 'Correct answer'); }
+      else if (orig === chosen) { b.classList.add('is-wrong'); v.innerHTML = ICON_NO + 'Your answer'; }
+      else b.classList.add('is-dim');
+    });
+    var fb = $('q-feedback');
+    fb.className = 'feedback ' + (ok ? 'is-correct' : 'is-wrong');
+    fb.innerHTML = '<p class="fb-head">' + (ok ? 'Correct.' : 'Not quite. The answer is “' + esc(q.options[q.answerIndex]) + '”.') + '</p>' +
+      '<p>' + esc(q.explanation) + '</p>' +
+      '<p class="fb-src">Handbook: ' + esc(q.source) + '</p>';
+    var next = $('q-next');
+    next.textContent = s.index === s.items.length - 1 ? 'See results' : 'Next question';
+    next.hidden = false;
+    updateProgress();
+    if (fresh) {
+      next.focus({ preventScroll: true });
+      scrollTo(next);
+    }
+  }
+  function nextQuestion() {
+    var s = session;
+    if (!s) return;
+    if (s.index < s.items.length - 1) {
+      s.index++;
+      data.session = s; save();
+      renderQuestion();
+      scrollTo($('q-lane'));
+      $('q-text').focus({ preventScroll: true });
+    } else finish();
+  }
+
+  // ---------- results ----------
+  function finish() {
+    var s = session, total = s.items.length, score = correctCount(s), need = passMark(s), passed = score >= need;
+    var missed = s.items.filter(function (it, i) { return s.answers[i] !== byId.get(it.id).answerIndex; }).map(function (it) { return it.id; });
+    var record = { score: score, total: total, passed: passed, at: Date.now() };
+    if (s.mode === 'mock') data.history.mock = record;
+    else if (s.mode === 'topic') { data.history.topics = data.history.topics || {}; data.history.topics[data.lastTopic || s.label] = record; }
+    data.lastMissed = missed;
+    data.session = null; session = null; save();
+    renderEnd(s, score, total, need, passed, missed);
+  }
+  function renderEnd(s, score, total, need, passed, missed) {
+    var how = s.mode === 'mock' ? 'The real under-18 test needs 38 of 46.' :
+      'Practice sessions use the same pass rate as the under-18 test (38 of 46, about 83%).';
+    var html = '<div class="result-sign ' + (passed ? 'pass' : 'fail') + '">' +
+      '<h3>' + (passed ? 'You passed' : 'Not yet') + '</h3>' +
+      '<p class="score">' + score + ' of ' + total + ' correct. You needed ' + need + '.</p>' +
+      '<p>' + how + '</p></div><div class="result-actions">';
+    if (missed.length) html += '<button type="button" class="btn btn-primary" id="end-review">Review missed questions (' + missed.length + ')</button>';
+    html += s.mode === 'mock'
+      ? '<button type="button" class="btn' + (missed.length ? '' : ' btn-primary') + '" id="end-again">Take another mock test</button>'
+      : '<button type="button" class="btn' + (missed.length ? '' : ' btn-primary') + '" id="end-mock">Try a mock test</button>';
+    html += '<button type="button" class="btn-text" id="end-home">Choose a different mode</button></div>';
+    if (missed.length) {
+      html += '<details class="missed"><summary>See the questions you missed</summary><ol>' +
+        missed.map(function (id) {
+          var q = byId.get(id);
+          return '<li>' + esc(q.question) + '<span class="ans">' + esc(q.options[q.answerIndex]) + '</span><span class="page">' + esc(q.source) + '</span></li>';
+        }).join('') + '</ol></details>';
+    }
+    var end = $('q-end');
+    end.innerHTML = html;
+    show('q-end');
+    scrollTo($('quiz'));
+    end.focus({ preventScroll: true });
+    var rv = $('end-review');
+    if (rv) rv.addEventListener('click', function () { begin('review', missed, 'Reviewing missed questions'); });
+    var ag = $('end-again'); if (ag) ag.addEventListener('click', startMock);
+    var em = $('end-mock'); if (em) em.addEventListener('click', startMock);
+    $('end-home').addEventListener('click', function () { renderStart(); $('start-mock').focus(); });
+  }
+
+  // ---------- events ----------
+  $('start-mock').addEventListener('click', startMock);
+  $('start-topic').addEventListener('click', startTopic);
+  $('topic').addEventListener('change', function () { data.lastTopic = this.value; save(); renderStart(); });
+  $('resume-go').addEventListener('click', function () {
+    show('q-play'); renderQuestion(); $('q-text').focus({ preventScroll: true });
+  });
+  $('resume-drop').addEventListener('click', function () {
+    session = null; data.session = null; save(); renderStart(); $('start-mock').focus();
+  });
+  $('q-options').addEventListener('click', function (e) {
+    var b = e.target.closest('.option');
+    if (b && !b.disabled) answer(Number(b.getAttribute('data-pos')));
+  });
+  $('q-next').addEventListener('click', nextQuestion);
+  $('q-exit').addEventListener('click', function () { renderStart(); $('resume-go').focus(); });
+
+  document.addEventListener('keydown', function (e) {
+    if ($('q-play').hidden || !session || e.altKey || e.ctrlKey || e.metaKey) return;
+    var t = e.target;
+    if (t && /^(SELECT|INPUT|TEXTAREA)$/.test(t.tagName)) return;
+    var answered = session.answers[session.index] !== null && session.answers[session.index] !== undefined;
+    if (!answered && (e.key === '1' || e.key === '2' || e.key === '3')) {
+      e.preventDefault();
+      answer(Number(e.key) - 1);
+    } else if (answered && e.key === 'Enter') {
+      var a = document.activeElement;
+      if (a === $('q-next')) return;                     // native button activation handles it
+      if (a && a !== document.body && a.matches('button, a, summary')) return; // don't hijack other controls
+      e.preventDefault();
+      nextQuestion();
+    }
+  });
+
+  fillTopics();
+  renderStart();
+})();
+</script>
+</body>
+</html>
